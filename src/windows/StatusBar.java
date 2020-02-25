@@ -82,7 +82,7 @@ public class StatusBar extends JPanel
 		g.setColor(Color.YELLOW); //经验条
 		g.fillRect(539, 23, (int)((double)exp/allexp*length), 15);
 		
-		//数字比例6.7619 /[比例3
+		//数字比例6.7619 /比例3
 		String hptxt="["+Integer.toString(hp)+"/"+Integer.toString(allhp)+"]";
 		int hptxtnuml=Integer.toString(hp).length()+Integer.toString(allhp).length();//血量数字显示的数字长度
 		int hptxtx=272-(int)(hptxtnuml*6.7619);//相应横坐标

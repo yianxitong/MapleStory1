@@ -51,7 +51,7 @@ public class Obj extends JPanel
 		
 		switch(zhuangtai)
 		{
-		case 0:g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/主角/走路/hero1_walk18.png"),x-76,y-68,this);break;
+		case 0:g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/主角/走路/hero1_walk"+"18"+".png"),x-76,y-68,this);break;
 		case 1:g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/主角/走路/hero1_walk21.png"),x-76,y-68,this);break;
 		case 2:g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/主角/走路/hero1_walk24.png"),x-76,y-68,this);break;
 		case 3:g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/主角/走路/hero1_walk27.png"),x-76,y-68,this);break;
