@@ -69,6 +69,18 @@ public class StatusBar extends JPanel
 	{
 		return lv;
 	}
+	public int getHP()
+	{
+		return hp;
+	}	
+	public int getMP()
+	{
+		return mp;
+	}	
+	public int getEXP()
+	{
+		return exp;
+	}
 	
 	
 	public void paint(Graphics g)

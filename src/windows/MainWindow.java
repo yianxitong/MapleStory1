@@ -2,6 +2,7 @@ package windows;
 
 
 import java.awt.event.*;
+import java.security.PublicKey;
 
 import javax.swing.*;
 
@@ -13,6 +14,8 @@ import allbutton.*;
 
 public class MainWindow extends JFrame
 {
+	
+	public static MainWindow MWD;
 	private int Direction; /**人物方向状态
 	 * 0=左
 	 * 1=右
@@ -70,6 +73,10 @@ public class MainWindow extends JFrame
 			new TaskButton(),new KeySetButton(),
 			new SaveButton()
 		};
+	public StatusBar getStatusBar()
+	{
+		return statusbar;
+	}
 	
 	private Monster [][]gw=
 		{
@@ -1536,6 +1543,6 @@ public class MainWindow extends JFrame
 	
 	public static void main(String[] args) 
 	{
-		new MainWindow();
+		MWD=new MainWindow();
 	}
 }
