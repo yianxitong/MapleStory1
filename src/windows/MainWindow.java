@@ -50,6 +50,7 @@ public class MainWindow extends JFrame
 	private int movetime=0;//移动计次
 	private int gwjc1=0;//怪物计次1
 	private int gwjc2=0;//怪物计次2
+	private int dmg;
 	
 	private Obj ren=new Obj(0,0);//创建角色
 	private KeyboardWindow keyboard=new KeyboardWindow();//键盘框
@@ -551,9 +552,15 @@ public class MainWindow extends JFrame
 					{
 						for(Monster tempgw:gw[mapNo-1])
 						{
-							if(!(attacking==1&&(Direction==0?((tempgw.getx()<=map.getrenx()&&tempgw.getx()>=map.getrenx()-115)?1:0):((tempgw.getx()>=map.getrenx()&&tempgw.getx()<=map.getrenx()+115)?1:0))==1&&(tempgw.gety()<=map.getreny()&&tempgw.gety()>=map.getreny()-100)))
+							if(!(
+									attacking==1&&
+									(Direction==0?((tempgw.getx()<=map.getrenx()&&tempgw.getx()>=map.getrenx()-115)?1:0):
+										          ((tempgw.getx()>=map.getrenx()&&tempgw.getx()<=map.getrenx()+115)?1:0))==1&&  //怪在水平方向上被攻击范围判断  
+									(tempgw.gety()<=map.getreny()&&tempgw.gety()>=map.getreny()-100) // 怪在人纵方向被攻击范围
+								)  
+							  )
 							{
-								if(tempgw.getTarget()==0)
+								if(tempgw.getTarget()==0)  //怪非攻击状态
 								{
 									switch((int)(Math.random()*1000)%6)
 									{
@@ -562,12 +569,19 @@ public class MainWindow extends JFrame
 									case 2:
 									case 3:
 										{for(int i=0;i<10;i++)
-											{if(tempgw.getx()>=tempgw.getxmin()) 
+											{
+											if(tempgw.getx()>=tempgw.getxmin()) 
 												tempgw.movex(-2); 
 											if(tempgw.gety()==map.getreny()&&tempgw.getx()>=map.getrenx()-10&&tempgw.getx()<=map.getrenx()+10)
-											{new Thread(Battack).start();badirection=1;}
+											    {
+												dmg = tempgw.getAtk();
+												statusbar.battack(dmg);
+												new Thread(Battack).start();
+												badirection=1;
+												}
 											tempgw.setzhuangtai(2); 
-											MainWindow.this.repaint();}
+											MainWindow.this.repaint();
+											}
 										break;
 										}
 									case 4:
@@ -576,14 +590,19 @@ public class MainWindow extends JFrame
 											{if(tempgw.getx()<=tempgw.getxmax()) 
 												tempgw.movex(2);
 											if(tempgw.gety()==map.getreny()&&tempgw.getx()>=map.getrenx()-10&&tempgw.getx()<=map.getrenx()+10)
-											{new Thread(Battack).start();badirection=0;} 
+											{
+												dmg = tempgw.getAtk();
+												statusbar.battack(dmg);
+												new Thread(Battack).start();
+												badirection=0;
+												} 
 											tempgw.setzhuangtai(3); 
 											MainWindow.this.repaint();}
 										break;
 										}
 									}
 									//tempgw.setzhuangtai((int)(Math.random()*1000)%4);
-								}
+								} //接触怪物
 								else
 								{
 							
@@ -591,14 +610,50 @@ public class MainWindow extends JFrame
 									{
 									case 2:
 									{
-										if(tempgw.getx()-100<=map.getrenx()) tempgw.setzhuangtai(6);
-										else if(tempgw.getx()>=tempgw.getxmin()) {for(int i=0;i<5;i++){tempgw.movex(-2);if(tempgw.gety()==map.getreny()&&tempgw.getx()>=map.getrenx()-10&&tempgw.getx()<=map.getrenx()+10){new Thread(Battack).start();badirection=1;}tempgw.setzhuangtai(2);MainWindow.this.repaint();}}
+										if(tempgw.getx()-100<=map.getrenx()) {
+											tempgw.setzhuangtai(6);
+											dmg = tempgw.getAtk();
+											statusbar.battack(dmg);
+										}
+										else if(tempgw.getx()>=tempgw.getxmin()) 
+										{
+											for(int i=0;i<5;i++)
+											{
+												tempgw.movex(-2);
+												if(tempgw.gety()==map.getreny()&&tempgw.getx()>=map.getrenx()-10&&tempgw.getx()<=map.getrenx()+10)
+												{
+													dmg = tempgw.getAtk();
+													statusbar.battack(dmg);
+													new Thread(Battack).start();
+													badirection=1;
+												}
+												tempgw.setzhuangtai(2);MainWindow.this.repaint();
+											}
+										}
 										break;
 									}
 									case 3:
 									{
-										if(tempgw.getx()+100>=map.getrenx()) tempgw.setzhuangtai(7);
-										else if(tempgw.getx()<=tempgw.getxmax()) {for(int i=0;i<5;i++){tempgw.movex(2);if(tempgw.gety()==map.getreny()&&tempgw.getx()>=map.getrenx()-10&&tempgw.getx()<=map.getrenx()+10){new Thread(Battack).start();badirection=0;}tempgw.setzhuangtai(3);MainWindow.this.repaint();}}
+										if(tempgw.getx()+100>=map.getrenx()) 
+											{
+											    tempgw.setzhuangtai(7);
+											    dmg = tempgw.getAtk();
+												statusbar.battack(dmg);
+											}
+										else if(tempgw.getx()<=tempgw.getxmax()) 
+										{
+											for(int i=0;i<5;i++)
+											{
+												tempgw.movex(2);
+												if(tempgw.gety()==map.getreny()&&tempgw.getx()>=map.getrenx()-10&&tempgw.getx()<=map.getrenx()+10)
+												{
+													dmg = tempgw.getAtk();
+													statusbar.battack(dmg);
+													new Thread(Battack).start();badirection=0;
+												}
+												tempgw.setzhuangtai(3);MainWindow.this.repaint();
+											}
+										}
 										break;
 									}
 									}
@@ -662,13 +717,25 @@ public class MainWindow extends JFrame
 							{
 							case 2:
 							{
-								if(tempgw.getx()>=tempgw.getxmin()) {for(int i=0;i<5;i++){tempgw.movex(-1);if(tempgw.gety()==map.getreny()&&tempgw.getx()>=map.getrenx()-10&&tempgw.getx()<=map.getrenx()+10){new Thread(Battack).start();badirection=1;}tempgw.setzhuangtai(2);MainWindow.this.repaint();}}
+								if(tempgw.getx()>=tempgw.getxmin()) 
+								{for(int i=0;i<5;i++)
+								{
+									tempgw.movex(-1);
+									if(tempgw.gety()==map.getreny()&&tempgw.getx()>=map.getrenx()-10&&tempgw.getx()<=map.getrenx()+10)
+									{
+										new Thread(Battack).start();
+										badirection=1;
+										}
+									tempgw.setzhuangtai(2);MainWindow.this.repaint();
+								}
+								}
 								break;
 							}
 							case 3:
 							{
 								
-								if(tempgw.getx()<=tempgw.getxmax()) {for(int i=0;i<5;i++){tempgw.movex(1);if(tempgw.gety()==map.getreny()&&tempgw.getx()>=map.getrenx()-10&&tempgw.getx()<=map.getrenx()+10){new Thread(Battack).start();badirection=0;};tempgw.setzhuangtai(3);MainWindow.this.repaint();}}
+								if(tempgw.getx()<=tempgw.getxmax()) 
+								{for(int i=0;i<5;i++){tempgw.movex(1);if(tempgw.gety()==map.getreny()&&tempgw.getx()>=map.getrenx()-10&&tempgw.getx()<=map.getrenx()+10){new Thread(Battack).start();badirection=0;};tempgw.setzhuangtai(3);MainWindow.this.repaint();}}
 								break;
 							}
 							}
@@ -870,7 +937,7 @@ public class MainWindow extends JFrame
 			{
 				if(moving==1)
 				{
-					int i=5;
+					int i=23;
 					new Thread(Jump).start();
 					switch(Direction)
 					{
@@ -1496,11 +1563,10 @@ public class MainWindow extends JFrame
 				if(Drop==0);//确保只能在地面上跳跃
 				{
 					ren.setzhuangtai(Direction==0?11:10);
-					/*if(moving==0)
+					if(moving==0)
 						new Thread(Jump).start();
 					else 
-						new Thread(MJump).start();*///测试的时候用这一段替代下面的跳跃
-					new Thread(Jump).start();
+						new Thread(MJump).start();
 				}
 			}
 		}		

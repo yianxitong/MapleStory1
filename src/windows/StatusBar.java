@@ -49,6 +49,12 @@ public class StatusBar extends JPanel
 	{
 		return atk;
 	}
+	
+	public void battack(int dmg)
+	{
+		hp -= dmg;
+	}
+	
 	public void addexp(int m_exp)
 	{
 		exp+=m_exp;

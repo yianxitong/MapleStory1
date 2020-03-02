@@ -51,16 +51,16 @@ public class Obj extends JPanel
 		
 		switch(zhuangtai)
 		{
-		case 0:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/×ßÂ·/hero1_walk"+"18"+".png"),x-76,y-68,this);break;
-		case 1:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/×ßÂ·/hero1_walk21.png"),x-76,y-68,this);break;
-		case 2:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/×ßÂ·/hero1_walk24.png"),x-76,y-68,this);break;
-		case 3:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/×ßÂ·/hero1_walk27.png"),x-76,y-68,this);break;
-		case 4:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/×ßÂ·/hero1_walk18_2.png"),x-76,y-68,this);break;
-		case 5:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/×ßÂ·/hero1_walk21_2.png"),x-76,y-68,this);break;
-		case 6:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/×ßÂ·/hero1_walk24_2.png"),x-76,y-68,this);break;
-		case 7:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/×ßÂ·/hero1_walk27_2.png"),x-76,y-68,this);break;
-		case 8:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/Õ¾Á¢/hero1_walk18.png"),x-76,y-68,this);break;
-		case 9:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/Õ¾Á¢/hero1_walk18_2.png"),x-76,y-68,this);break;
+		case 0:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/×ßÂ·/hero1_walk"+"18"+".png"),x-30,y-68,this);break;
+		case 1:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/×ßÂ·/hero1_walk21.png"),x-30,y-68,this);break;
+		case 2:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/×ßÂ·/hero1_walk24.png"),x-30,y-68,this);break;
+		case 3:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/×ßÂ·/hero1_walk27.png"),x-30,y-68,this);break;
+		case 4:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/×ßÂ·/hero1_walk18_2.png"),x-30,y-68,this);break;
+		case 5:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/×ßÂ·/hero1_walk21_2.png"),x-30,y-68,this);break;
+		case 6:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/×ßÂ·/hero1_walk24_2.png"),x-30,y-68,this);break;
+		case 7:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/×ßÂ·/hero1_walk27_2.png"),x-30,y-68,this);break;
+		case 8:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/Õ¾Á¢/hero1_walk18.png"),x-30,y-68,this);break;
+		case 9:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/Õ¾Á¢/hero1_walk18_2.png"),x-30,y-68,this);break;
 		case 10:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/ÌøÔ¾/hero1_321.png"),x-96,y-68,this);break;
 		case 11:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/ÌøÔ¾/hero1_321_2.png"),x-86,y-68,this);break;
 		case 12:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/Å¿ÏÂ/Ãæ³¯×óÅ¿ÏÂ.png"),x-106,y-40,this);break;

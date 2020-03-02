@@ -50,30 +50,35 @@ public class Monster extends JPanel
 		{
 			HP=5000;
 			Defense=100;
+			Atk=10;
 			break;
 		}
 		case 2:
 		{
 			HP=10000;
 			Defense=200;
+			Atk=10;
 			break;
 		}
 		case 3:
 		{
 			HP=50000;
 			Defense=1000;
+			Atk=10;
 			break;
 		}
 		case 4:
 		{
 			HP=50000;
 			Defense=1000;
+			Atk=10;
 			break;
 		}
 		case 5:
 		{
 			HP=100000;
 			Defense=1000;
+			Atk=10;
 			break;
 		}
 		}
@@ -124,6 +129,12 @@ public class Monster extends JPanel
 	{
 		DHP=(atk-Defense)<=0?1:atk-Defense;
 	}
+	
+	public int getAtk()
+	{
+		return Atk;
+	}
+	
 	public int NewMonster()     //返回的是经验值
 	{
 		x=bx;
