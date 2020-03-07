@@ -1559,18 +1559,16 @@ public class MainWindow extends JFrame
 			}
 			if(e.getKeyCode()==KeyEvent.VK_K)
 			{
-				if(Drop==0)//确保只能在地面上跳跃
+				if(Drop==0);//确保只能在地面上跳跃
 				{
 					ren.setzhuangtai(Direction==0?11:10);
 					if(moving==0)
 						new Thread(Jump).start();
-					else {
+					else 
 						new Thread(MJump).start();
-					}
 				}
 			}
-			
-		}	
+		}		
 		public void keyReleased(KeyEvent e)//释放
 		{
 			if(e.getKeyCode()==KeyEvent.VK_RIGHT)
