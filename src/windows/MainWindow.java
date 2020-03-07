@@ -1415,7 +1415,7 @@ public class MainWindow extends JFrame
 	{
 		public void keyPressed(KeyEvent e)//按下、按住
 		{
-			if(e.getKeyCode()==KeyEvent.VK_UP)//上 测试用
+			if(e.getKeyCode()==KeyEvent.VK_W)//上 测试用
 			{
 				/*if(ren.gety()>=100||map.getreny()<=100)
 					ren.movey(-5);
@@ -1460,7 +1460,7 @@ public class MainWindow extends JFrame
 					new Thread(Jump).start();
 				}
 			}
-			if(e.getKeyCode()==KeyEvent.VK_DOWN)//下
+			if(e.getKeyCode()==KeyEvent.VK_S)//下
 			{			
 				
 				if(Drop==0)//确保人物在地面上
@@ -1489,7 +1489,7 @@ public class MainWindow extends JFrame
 					new Thread(DropTest).start();
 				}
 			}
-			if(e.getKeyCode()==KeyEvent.VK_RIGHT)//右
+			if(e.getKeyCode()==KeyEvent.VK_D)//右
 			{
 				if(Drop!=2)
 				{
@@ -1519,7 +1519,7 @@ public class MainWindow extends JFrame
 				new Thread(DropTest).start();
 				}
 			}
-			if(e.getKeyCode()==KeyEvent.VK_LEFT)//左
+			if(e.getKeyCode()==KeyEvent.VK_A)//左
 			{
 				if(Drop!=2)
 				{
@@ -1571,7 +1571,7 @@ public class MainWindow extends JFrame
 		}		
 		public void keyReleased(KeyEvent e)//释放
 		{
-			if(e.getKeyCode()==KeyEvent.VK_RIGHT)
+			if(e.getKeyCode()==KeyEvent.VK_D)
 			{	if(Drop==0)
 				{
 					movetime=0;
@@ -1580,7 +1580,7 @@ public class MainWindow extends JFrame
 					MainWindow.this.repaint();
 				}
 			}
-			if(e.getKeyCode()==KeyEvent.VK_LEFT)
+			if(e.getKeyCode()==KeyEvent.VK_A)
 			{
 				if(Drop==0)
 				{
@@ -1590,7 +1590,7 @@ public class MainWindow extends JFrame
 					MainWindow.this.repaint();
 				}
 			}
-			if(e.getKeyCode()==KeyEvent.VK_DOWN)
+			if(e.getKeyCode()==KeyEvent.VK_S)
 			{			
 				if(Drop==0)
 				if(Direction==0)
