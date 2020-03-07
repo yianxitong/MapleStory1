@@ -936,7 +936,7 @@ public class MainWindow extends JFrame
 			{
 				if(moving==1)
 				{
-					int i=23;
+					int i=22;
 					new Thread(Jump).start();
 					switch(Direction)
 					{
@@ -1559,13 +1559,14 @@ public class MainWindow extends JFrame
 			}
 			if(e.getKeyCode()==KeyEvent.VK_K)
 			{
-				if(Drop==0);//确保只能在地面上跳跃
+				if(Drop==0)//确保只能在地面上跳跃
 				{
 					ren.setzhuangtai(Direction==0?11:10);
 					if(moving==0)
 						new Thread(Jump).start();
-					else 
+					else {
 						new Thread(MJump).start();
+					}
 				}
 			}
 		}		
