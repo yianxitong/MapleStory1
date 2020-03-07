@@ -180,7 +180,6 @@ public class MainWindow extends JFrame
 		 * 无语的是我打开真的冒险岛
 		 * 调到800x600的窗口模式
 		 * 两个挪到一起竟然一样大
-		 * 奇葩了。。
 		 * */
 		this.setResizable(false);//固定窗口大小
 		this.setVisible(true);//显示窗口
