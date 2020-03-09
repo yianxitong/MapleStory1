@@ -17,7 +17,7 @@ public class Boss extends JPanel
 	private int Offsety;
 
 	private int Stage;//½×¶Î
-	private int HP;//Ñª
+	private int HP;//Ñª/
 	private int Round;//»ØºÏ
 	private int atk;//¹¥»÷Á¦
 	private int zhuangtai;

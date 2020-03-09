@@ -16,29 +16,39 @@ public class MainWindow extends JFrame
 {
 	
 	public static MainWindow MWD;
-	private int Direction; /**人物方向状态
+	/**人物方向状态
 	 * 0=左
 	 * 1=右
 	 * */	
-	private int Drop=1;/**人物掉落状态
+	private int Direction; 
+	/**人物掉落状态
 	 * 0=假
 	 * 1=真
 	 * */
-	private int jumping=0;/**跳跃线程状态
+	private int Drop=1;
+	/**跳跃线程状态
+	 * 0=未启动
+	 * 1=已启动
+	 * */
+	private int jumping=0;	
+	/**掉落线程状态
 	 * 0=未启动
 	 * 1=已启动
 	 * */	
-	private int droping=0;/**掉落线程状态
-	 * 0=未启动
-	 * 1=已启动
-	 * */	
+	private int droping=0;
+	/**
+	 * 是否移动线程
+	 * 0=静止
+	 * 1=移动
+	 */
 	private int moving=0;
 	private int attacking=0;
 	private int battacking=0;
 	private int badirection=0;
-	private int mapNo=0;/**当前使用地图编号
+	/**当前使用地图编号
 	 * 0=女皇之路
 	 * */
+	private int mapNo=0;
 	private int mapymax;//地图纵坐标最大值
 	private int mapxmax;//地图横坐标最大值
 	private int progress=0;//游戏进度
@@ -1532,7 +1542,7 @@ public class MainWindow extends JFrame
 
 				if(map.AllowMoveL()==1)
 				{
-					//if(ren.getx()<=600||map.getrenx()>mapxmax-200)
+					//if(.getx()<=600||map.getrenx()>mapxmax-200)
 					if(ren.getx()>=200||map.getrenx()<210)
 					{
 						ren.movex(-5);
