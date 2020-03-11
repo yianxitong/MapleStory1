@@ -384,9 +384,9 @@ public class Mapcs extends JPanel
 		{
 		case 3:
 		{
-			if((renx>=695&&renx<=700&&reny>=300&&reny<660)//695<x<700可能
-					||(renx>=980&&renx<=985&&reny>=660&&reny<1020)
-					||(renx>=250&&renx<=255&&reny>=660&&reny<1020))	
+			if((renx>=685&&renx<=710&&reny>=300&&reny<660)//695<x<700可能比较合适
+					||(renx>=970&&renx<=995&&reny>=660&&reny<1020)
+					||(renx>=240&&renx<=265&&reny>=660&&reny<1020))	
 				return 1;
 			break;
 		}

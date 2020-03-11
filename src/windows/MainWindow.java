@@ -283,7 +283,7 @@ public class MainWindow extends JFrame
 			for(int i=0;i<7;i++)
 				npc[i].setVisible(true);
 			npc[0].setBounds(2350-NpcOffsetx,720+NpcOffsety,123,101);//Ï£ÄÉË¹
-			npc[1].setBounds(1800-NpcOffsetx,707+NpcOffsety,48,109);//ÄÏ¹þÌØ
+			npc[1].setBounds(1800-NpcOffsetx,707+NpcOffsety,170,120);//ÄÏ¹þÌØ
 			npc[2].setBounds(732-NpcOffsetx,515+NpcOffsety,97,103);//Ã×¹þ¶û
 			npc[3].setBounds(465-NpcOffsetx,705+NpcOffsety,97,109);//ÒÁÀòÄÈ
 			npc[4].setBounds(788-NpcOffsetx,695+NpcOffsety,78,122);//°Â×È
