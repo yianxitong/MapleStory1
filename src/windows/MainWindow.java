@@ -187,7 +187,6 @@ public class MainWindow extends JFrame
 		/**窗口大小
 		 * 本来是800x600
 		 * 但是状态条显示不全。。
-		 * 无语的是我打开真的冒险岛
 		 * 调到800x600的窗口模式
 		 * 两个挪到一起竟然一样大
 		 * */
@@ -283,7 +282,7 @@ public class MainWindow extends JFrame
 			for(int i=0;i<7;i++)
 				npc[i].setVisible(true);
 			npc[0].setBounds(2350-NpcOffsetx,720+NpcOffsety,123,101);//希纳斯
-			npc[1].setBounds(1800-NpcOffsetx,707+NpcOffsety,170,120);//南哈特
+			npc[1].setBounds(1800-NpcOffsetx,695+NpcOffsety,170,120);//贤者
 			npc[2].setBounds(732-NpcOffsetx,515+NpcOffsety,97,103);//米哈尔
 			npc[3].setBounds(465-NpcOffsetx,705+NpcOffsety,97,109);//伊莉娜
 			npc[4].setBounds(788-NpcOffsetx,695+NpcOffsety,78,122);//奥兹
