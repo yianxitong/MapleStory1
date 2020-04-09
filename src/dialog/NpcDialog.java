@@ -22,13 +22,13 @@ public class NpcDialog  extends JPanel
 		{
 		case 0:
 		{
-			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/希纳斯/希纳斯.png"),15,40,this);//这里放原画
+			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/女神/女神.png"),15,40,this);//这里放原画
 			g.drawString("欢迎来到圣地...", 165, 30);
 			break;
 		}
 		case 1:
 		{
-			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/南哈特/南哈特.png"),50,40,this);//这个x，y坐标是相对小屏幕来讲的
+			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/贤者/.png"),50,40,this);//这个x，y坐标是相对小屏幕来讲的
 			switch(progress)
 			{
 			case 0:
@@ -284,37 +284,37 @@ public class NpcDialog  extends JPanel
 		}
 		case 2:
 		{
-			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/黑化的五骑士/米哈尔带名字.png"),15,40,this);
+			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/骑士/骑士1.png"),15,40,this);
 			g.drawString("恩？新人！呵呵，离女皇远一点！", 165, 30);
 			break;
 		}
 		case 3:
 		{
-			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/黑化的五骑士/伊莉娜带名字.png"),15,40,this);
+			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/骑士/骑士2.png"),15,40,this);
 			g.drawString("恩？新人！呵呵，离女皇远一点！", 165, 30);
 			break;
 		}
 		case 4:
 		{
-			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/黑化的五骑士/奥兹带名字.png"),15,40,this);
+			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/骑士/骑士3.png"),15,40,this);
 			g.drawString("恩？新人！呵呵，离女皇远一点！", 165, 30);
 			break;
 		}
 		case 5:
 		{
-			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/黑化的五骑士/伊卡尔特带名字.png"),15,40,this);
+			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/骑士/骑士4.png"),15,40,this);
 			g.drawString("恩？新人！呵呵，离女皇远一点！", 165, 30);
 			break;
 		}
 		case 6:
 		{
-			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/黑化的五骑士/胡克带名字.png"),15,40,this);
+			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/骑士/骑士5.png"),15,40,this);
 			g.drawString("恩？新人！呵呵，离女皇远一点！", 165, 30);
 			break;
 		}
 		case 7:
 		{
-			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/麦吉/年轻.png"),15,40,this);
+			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/高手/站.png"),15,40,this);
 			switch(progress)
 			{
 			case 35:

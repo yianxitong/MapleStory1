@@ -18,7 +18,7 @@ public class NPC extends JPanel
 		{
 		case 0:
 		{
-			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/希纳斯/希纳斯.png"),0,0,this);
+			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/女神/女神.png"),0,0,this);
 			break;
 		}
 		case 1:
@@ -28,37 +28,37 @@ public class NPC extends JPanel
 		}
 		case 2:
 		{
-			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/黑化的五骑士/米哈尔栏杆带名字.png"),0,0,this);
+			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/骑士/骑士1.png"),0,0,this);
 			break;
 		}
 		case 3:
 		{
-			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/黑化的五骑士/伊莉娜带名字.png"),0,0,this);
+			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/骑士/骑士2.png"),0,0,this);
 			break;
 		}
 		case 4:
 		{
-			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/黑化的五骑士/奥兹带名字.png"),0,0,this);
+			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/骑士/骑士3.png"),0,0,this);
 			break;
 		}
 		case 5:
 		{
-			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/黑化的五骑士/伊卡尔特带名字.png"),0,0,this);
+			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/骑士/骑士4.png"),0,0,this);
 			break;
 		}
 		case 6:
 		{
-			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/黑化的五骑士/胡克带名字.png"),0,0,this);
+			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/骑士/骑士5.png"),0,0,this);
 			break;
 		}
 		case 7:
 		{
-			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/麦吉/年轻.png"),0,0,this);
+			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/高手/站.png"),0,0,this);
 			break;
 		}
 		case 8:
 		{
-			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/麦吉/年轻.png"),0,0,this);
+			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/高手/站.png"),0,0,this);
 			break;
 		}
 		}

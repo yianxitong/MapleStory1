@@ -281,13 +281,13 @@ public class MainWindow extends JFrame
 		{
 			for(int i=0;i<7;i++)
 				npc[i].setVisible(true);
-			npc[0].setBounds(2350-NpcOffsetx,720+NpcOffsety,123,101);//Ï£ÄÉË¹
-			npc[1].setBounds(1800-NpcOffsetx,695+NpcOffsety,170,120);//ÏÍÕß
-			npc[2].setBounds(732-NpcOffsetx,515+NpcOffsety,97,103);//Ã×¹þ¶û
-			npc[3].setBounds(465-NpcOffsetx,705+NpcOffsety,97,109);//ÒÁÀòÄÈ
-			npc[4].setBounds(788-NpcOffsetx,695+NpcOffsety,78,122);//°Â×È
-			npc[5].setBounds(302-NpcOffsetx,420+NpcOffsety,77,116);//ÒÁ¿¨¶ûÌØ
-			npc[6].setBounds(663-NpcOffsetx,635+NpcOffsety,77,119);//ºú¿Ë
+			npc[0].setBounds(2350-NpcOffsetx,720+NpcOffsety,123,101);
+			npc[1].setBounds(1300-NpcOffsetx,695+NpcOffsety,170,120);//ÏÍÕß
+			npc[2].setBounds(732-NpcOffsetx,515+NpcOffsety,97,103);
+			npc[3].setBounds(465-NpcOffsetx,705+NpcOffsety,97,109);
+			npc[4].setBounds(788-NpcOffsetx,695+NpcOffsety,78,122);
+			npc[5].setBounds(302-NpcOffsetx,420+NpcOffsety,77,116);
+			npc[6].setBounds(663-NpcOffsetx,635+NpcOffsety,77,119);
 			break;
 		}
 		case 1:
