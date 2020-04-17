@@ -2,10 +2,16 @@ package windows;
 
 
 import java.awt.event.*;
+import java.io.IOException;
+import java.nio.file.Paths;
 import java.security.PublicKey;
 
 import javax.swing.*;
 
+import org.jsfml.audio.Sound;
+import org.jsfml.audio.SoundBuffer;
+import org.jsfml.system.Clock;
+import org.jsfml.system.Time;
 
 import menu.Menu;
 import object.*;
@@ -130,6 +136,7 @@ public class MainWindow extends JFrame
 	private Thread atMap5=new Thread(new TestRunnable(9));
 	private Thread atMap6=new Thread(new TestRunnable(10));
 	private Thread movesee=new Thread(new TestRunnable(11));
+	private Thread Bgm=new Thread(new TestRunnable(13));
 	
 	public MainWindow()//¹¹Ôì´°¿Ú
 	{	
@@ -272,6 +279,7 @@ public class MainWindow extends JFrame
 			temp.setVisible(false);
 		MainWindow.this.repaint();
 		new Thread(DropTest).start();
+		new Thread(Bgm).start();
 	}
 	public void NPCshow()//ÏÔÊ¾NPC
 	{
@@ -1055,6 +1063,33 @@ public class MainWindow extends JFrame
 			{
 				//Âó¼ª
 				
+			}
+			
+			case 13:
+			{
+				Time ZERO = null;
+				Time d = ZERO.getSeconds(14);
+				SoundBuffer bgm = new SoundBuffer();
+				try {
+				    bgm.loadFromFile(Paths.get("ÒôÀÖËØ²Ä","2.wav"));
+//				    d = bgm.getDuration();
+				    System.out.print(d);
+				} catch(IOException ex) {
+				    ex.printStackTrace();
+				}
+				//Create a sound and set its buffer
+				Sound sound = new Sound();
+				sound.setBuffer(bgm);
+				sound.play();
+				Clock c = new Clock();
+				long s =  c.getElapsedTime().asMilliseconds();
+				while(true) {
+					if(c.getElapsedTime().asMilliseconds()==(s+15000)) {
+						c.restart();
+						s=c.getElapsedTime().asMilliseconds();
+						sound.play();
+					}
+				}
 			}
 		}	
 		}
