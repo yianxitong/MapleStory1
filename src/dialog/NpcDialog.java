@@ -28,7 +28,7 @@ public class NpcDialog  extends JPanel
 		}
 		case 1:
 		{
-			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/贤者/头像/头像2.png"),10,10,150,200,this);//这个x，y坐标是相对小屏幕来讲的
+			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/贤者/.png"),50,40,this);//这个x，y坐标是相对小屏幕来讲的
 			switch(progress)
 			{
 			case 0:
