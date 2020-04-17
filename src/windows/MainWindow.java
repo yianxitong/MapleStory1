@@ -22,68 +22,68 @@ public class MainWindow extends JFrame
 {
 	
 	public static MainWindow MWD;
-	/**ÈËÎï·½Ïò×´Ì¬
-	 * 0=×ó
-	 * 1=ÓÒ
+	/**äººç‰©æ–¹å‘çŠ¶æ€
+	 * 0=å·¦
+	 * 1=å³
 	 * */	
 	private int Direction; 
-	/**ÈËÎïµôÂä×´Ì¬
-	 * 0=¼Ù
-	 * 1=Õæ
+	/**äººç‰©æ‰è½çŠ¶æ€
+	 * 0=å‡
+	 * 1=çœŸ
 	 * */
 	private int Drop=1;
-	/**ÌøÔ¾Ïß³Ì×´Ì¬
-	 * 0=Î´Æô¶¯
-	 * 1=ÒÑÆô¶¯
+	/**è·³è·ƒçº¿ç¨‹çŠ¶æ€
+	 * 0=æœªå¯åŠ¨
+	 * 1=å·²å¯åŠ¨
 	 * */
 	private int jumping=0;	
-	/**µôÂäÏß³Ì×´Ì¬
-	 * 0=Î´Æô¶¯
-	 * 1=ÒÑÆô¶¯
+	/**æ‰è½çº¿ç¨‹çŠ¶æ€
+	 * 0=æœªå¯åŠ¨
+	 * 1=å·²å¯åŠ¨
 	 * */	
 	private int droping=0;
 	/**
-	 * ÊÇ·ñÒÆ¶¯Ïß³Ì
-	 * 0=¾²Ö¹
-	 * 1=ÒÆ¶¯
+	 * æ˜¯å¦ç§»åŠ¨çº¿ç¨‹
+	 * 0=é™æ­¢
+	 * 1=ç§»åŠ¨
 	 */
 	private int moving=0;
 	private int attacking=0;
 	private int battacking=0;
 	private int badirection=0;
-	/**µ±Ç°Ê¹ÓÃµØÍ¼±àºÅ
-	 * 0=Å®»ÊÖ®Â·
+	/**å½“å‰ä½¿ç”¨åœ°å›¾ç¼–å·
+	 * 0=å¥³çš‡ä¹‹è·¯
 	 * */
 	private int mapNo=0;
-	private int mapymax;//µØÍ¼×İ×ø±ê×î´óÖµ
-	private int mapxmax;//µØÍ¼ºá×ø±ê×î´óÖµ
-	private int progress=0;//ÓÎÏ·½ø¶È
+	private int mapymax;//åœ°å›¾çºµåæ ‡æœ€å¤§å€¼
+	private int mapxmax;//åœ°å›¾æ¨ªåæ ‡æœ€å¤§å€¼
+	private int progress=0;//æ¸¸æˆè¿›åº¦
 
 	/********/
-	private int NpcOffsetx=0;//NPCxÖáÆ«ÒÆ
-	private int NpcOffsety=0;//NPCyÖáÆ«ÒÆ
-	private int diax,diay;//µã»÷¼ÍÂ¼×ø±êÒÔ±ãÍÏ¶¯
-	private int movetime=0;//ÒÆ¶¯¼Æ´Î
-	private int gwjc1=0;//¹ÖÎï¼Æ´Î1
-	private int gwjc2=0;//¹ÖÎï¼Æ´Î2
+	private int NpcOffsetx=0;//NPCxè½´åç§»
+	private int NpcOffsety=0;//NPCyè½´åç§»
+	private int diax,diay;//ç‚¹å‡»çºªå½•åæ ‡ä»¥ä¾¿æ‹–åŠ¨
+	private int movetime=0;//ç§»åŠ¨è®¡æ¬¡
+	private int gwjc1=0;//æ€ªç‰©è®¡æ¬¡1
+	private int gwjc2=0;//æ€ªç‰©è®¡æ¬¡2
 	private int dmg;
 	
-	private Obj ren=new Obj(0,0);//´´½¨½ÇÉ«
-	private KeyboardWindow keyboard=new KeyboardWindow();//¼üÅÌ¿ò
+	private Obj ren=new Obj(0,0);//åˆ›å»ºè§’è‰²
+	private KeyboardWindow keyboard=new KeyboardWindow();//é”®ç›˜æ¡†
 	private TaskWindow taskw=new TaskWindow();
-	private NpcDialog dialog=new NpcDialog();//¶Ô»°¿ò
-	private DialogNextButton nextb=new DialogNextButton();//È·ÈÏ°´Å¥
-	private DialogEndButton endb=new DialogEndButton();//Í£Ö¹¶Ô»°°´Å¥
+	private NpcDialog dialog=new NpcDialog();//å¯¹è¯æ¡†
+	private DialogNextButton nextb=new DialogNextButton();//ç¡®è®¤æŒ‰é’®
+	private DialogEndButton endb=new DialogEndButton();//åœæ­¢å¯¹è¯æŒ‰é’®
 	
-	private Mapcs map=new Mapcs();//µØÍ¼
-	private NPC []npc=//ËùÓĞNPC
+	private Mapcs map=new Mapcs();//åœ°å›¾
+	private NPC []npc=//æ‰€æœ‰NPC
 		{
 			new NPC(0),new NPC(1),new NPC(2),new NPC(3),new NPC(4),new NPC(5),new NPC(6),new NPC(7)
 		};
-	private StatusBar statusbar=new StatusBar();//×´Ì¬Ìõ
-	private SystemButton sysb=new SystemButton();//ÏµÍ³°´Å¥
-	private Menu menu=new Menu();//²Ëµ¥
-	private ButtonBase []menubutton=//²Ëµ¥°´Å¥
+	private StatusBar statusbar=new StatusBar();//çŠ¶æ€æ¡
+	private SystemButton sysb=new SystemButton();//ç³»ç»ŸæŒ‰é’®
+	private Menu menu=new Menu();//èœå•
+	private ButtonBase []menubutton=//èœå•æŒ‰é’®
 		{
 			new EquipmentButton(),new BackpackButton(),
 			new SkillButton(),new AbilityButton(),
@@ -123,10 +123,10 @@ public class MainWindow extends JFrame
 				new Monster(5,350,535,490,250),
 			}
 		};    //id,x,y,x-max,y-max
-	private Monster newgw=null;//ĞÂÉú¹ÖÎïÁÙÊ±ÒıÓÃ
-	private Thread DropTest=new Thread(new TestRunnable(0));//×¹ÂäÏß³Ì
-	private Thread Jump=new Thread(new TestRunnable(1));//ÌøÔ¾Ïß³Ì
-	private Thread Attack=new Thread(new TestRunnable(2));//¹¥»÷Ïß³Ì
+	private Monster newgw=null;//æ–°ç”Ÿæ€ªç‰©ä¸´æ—¶å¼•ç”¨
+	private Thread DropTest=new Thread(new TestRunnable(0));//å è½çº¿ç¨‹
+	private Thread Jump=new Thread(new TestRunnable(1));//è·³è·ƒçº¿ç¨‹
+	private Thread Attack=new Thread(new TestRunnable(2));//æ”»å‡»çº¿ç¨‹
 	private Thread newMonster=new Thread(new TestRunnable(3));
 	private Thread Newgw=new Thread(new TestRunnable(4));
 	private Thread atLV10=new Thread(new TestRunnable(5));
@@ -138,43 +138,43 @@ public class MainWindow extends JFrame
 	private Thread movesee=new Thread(new TestRunnable(11));
 	private Thread Bgm=new Thread(new TestRunnable(13));
 	
-	public MainWindow()//¹¹Ôì´°¿Ú
+	public MainWindow()//æ„é€ çª—å£
 	{	
-		/**Ìí¼Ó×é¼ş
-		 * ¸²¸ÇË³ĞòÊÇ´ÓÉÏµ½ÏÂ
+		/**æ·»åŠ ç»„ä»¶
+		 * è¦†ç›–é¡ºåºæ˜¯ä»ä¸Šåˆ°ä¸‹
 		 * */
-		for(ButtonBase temp:menubutton)//²Ëµ¥°´Å¥
+		for(ButtonBase temp:menubutton)//èœå•æŒ‰é’®
 			add(temp);
-		add(menu);//²Ëµ¥¿ò¼Ü
-		add(sysb);//ÏµÍ³°´Å¥
-		add(statusbar);//×´Ì¬Ìõ
-		add(nextb);//È·ÈÏ°´Å¥
-		add(endb);//Í£Ö¹¶Ô»°°´Å¥
-		add(dialog);//¶Ô»°¿ò
+		add(menu);//èœå•æ¡†æ¶
+		add(sysb);//ç³»ç»ŸæŒ‰é’®
+		add(statusbar);//çŠ¶æ€æ¡
+		add(nextb);//ç¡®è®¤æŒ‰é’®
+		add(endb);//åœæ­¢å¯¹è¯æŒ‰é’®
+		add(dialog);//å¯¹è¯æ¡†
 		add(taskw);
 		for(NPC temp:npc)//NPC
 			add(temp);
-		add(ren);//ÈËÎï
+		add(ren);//äººç‰©
 		for(Monster []tempgwsz:gw)
 		{
 			for(Monster tempgw:tempgwsz)
 				add(tempgw);
 		}
-		add(map);//µØÍ¼
+		add(map);//åœ°å›¾
 		
-		//ÉèÖÃ³õÊ¼Î»ÖÃ
-		ren.setBounds(0, 0, 806, 629);//ÈËÎïÈ«¾ÖÒÆ¶¯
+		//è®¾ç½®åˆå§‹ä½ç½®
+		ren.setBounds(0, 0, 806, 629);//äººç‰©å…¨å±€ç§»åŠ¨
 		NPCshow();
-		map.setBounds(0,0, 806, 629);//µØÍ¼È«¾ÖÒÆ¶¯
-		statusbar.setBounds(0, 544, 800, 56);//×´Ì¬Ìõ
-		sysb.setBounds(695, 555, 94, 37);//ÏµÍ³°´Å¥
-		menu.setBounds(692, 355, 100, 200);//²Ëµ¥À¸
-		for(int i=0;i<menubutton.length;i++)//²Ëµ¥°´Å¥
+		map.setBounds(0,0, 806, 629);//åœ°å›¾å…¨å±€ç§»åŠ¨
+		statusbar.setBounds(0, 544, 800, 56);//çŠ¶æ€æ¡
+		sysb.setBounds(695, 555, 94, 37);//ç³»ç»ŸæŒ‰é’®
+		menu.setBounds(692, 355, 100, 200);//èœå•æ 
+		for(int i=0;i<menubutton.length;i++)//èœå•æŒ‰é’®
 			menubutton[i].setBounds(695, 362+i*26, 94, 26);
-		//Ìí¼Ó¼àÌı
-		this.addKeyListener(new keypress());//¶Ô´°¿Ú¼üÅÌ¼àÌı¿ØÖÆÈËÎïºÍ¿ì½İ¼ü
-		sysb.addMouseListener(new mouselisten(0,7));//ÏµÍ³°´Å¥Êó±ê¼àÌı
-		for(int i=0;i<menubutton.length;i++)//²Ëµ¥°´Å¥¼àÌı
+		//æ·»åŠ ç›‘å¬
+		this.addKeyListener(new keypress());//å¯¹çª—å£é”®ç›˜ç›‘å¬æ§åˆ¶äººç‰©å’Œå¿«æ·é”®
+		sysb.addMouseListener(new mouselisten(0,7));//ç³»ç»ŸæŒ‰é’®é¼ æ ‡ç›‘å¬
+		for(int i=0;i<menubutton.length;i++)//èœå•æŒ‰é’®ç›‘å¬
 			menubutton[i].addMouseListener(new mouselisten(0,i));
 		for(int i=0;i<npc.length;i++)
 			npc[i].addMouseListener(new mouselisten(2,i));
@@ -187,30 +187,30 @@ public class MainWindow extends JFrame
 		dialog.setVisible(false);
 		endb.setVisible(false);
 		nextb.setVisible(false);
-		//´°¿Ú³õÊ¼»¯
+		//çª—å£åˆå§‹åŒ–
 		this.setLayout(null);
-		this.setTitle("Redemption");//´°¿Ú±êÌâ
+		this.setTitle("Redemption");//çª—å£æ ‡é¢˜
 		this.setSize(806, 629);
-		/**´°¿Ú´óĞ¡
-		 * ±¾À´ÊÇ800x600
-		 * µ«ÊÇ×´Ì¬ÌõÏÔÊ¾²»È«¡£¡£
-		 * µ÷µ½800x600µÄ´°¿ÚÄ£Ê½
-		 * Á½¸öÅ²µ½Ò»Æğ¾¹È»Ò»Ñù´ó
+		/**çª—å£å¤§å°
+		 * æœ¬æ¥æ˜¯800x600
+		 * ä½†æ˜¯çŠ¶æ€æ¡æ˜¾ç¤ºä¸å…¨ã€‚ã€‚
+		 * è°ƒåˆ°800x600çš„çª—å£æ¨¡å¼
+		 * ä¸¤ä¸ªæŒªåˆ°ä¸€èµ·ç«Ÿç„¶ä¸€æ ·å¤§
 		 * */
-		this.setResizable(false);//¹Ì¶¨´°¿Ú´óĞ¡
-		this.setVisible(true);//ÏÔÊ¾´°¿Ú
-		this.setDefaultCloseOperation(EXIT_ON_CLOSE);//È·±£¿ÉÒÔÕıÈ·ÍË³ö³ÌĞò
+		this.setResizable(false);//å›ºå®šçª—å£å¤§å°
+		this.setVisible(true);//æ˜¾ç¤ºçª—å£
+		this.setDefaultCloseOperation(EXIT_ON_CLOSE);//ç¡®ä¿å¯ä»¥æ­£ç¡®é€€å‡ºç¨‹åº
 		
-		gomap(1500,450);//Å®»ÊÖ®Â· 1500,300
+		gomap(1500,450);//å¥³çš‡ä¹‹è·¯ 1500,300
 	}
-	public void gomap(int x,int y)//½øÈëµØÍ¼ ÇĞ»»µØÍ¼Ê±£¬Òª¸øµØÍ¼Ò»¸ö³õÊ¼Î»ÖÃ
+	public void gomap(int x,int y)//è¿›å…¥åœ°å›¾ åˆ‡æ¢åœ°å›¾æ—¶ï¼Œè¦ç»™åœ°å›¾ä¸€ä¸ªåˆå§‹ä½ç½®
 	{
 		/**
-		 * È±Ïİ£º
-		 * ²»ÄÜ¿ØÖÆÈËÎïÔÚÆÁÄ»ÖĞµÄÎ»ÖÃ
-		 * ºóÆÚÎ¬»¤»á½â¾öÕâ¸öÎÊÌâ
+		 * ç¼ºé™·ï¼š
+		 * ä¸èƒ½æ§åˆ¶äººç‰©åœ¨å±å¹•ä¸­çš„ä½ç½®
+		 * åæœŸç»´æŠ¤ä¼šè§£å†³è¿™ä¸ªé—®é¢˜
 		 * */
-		map.setmapNo(mapNo);//ÇĞ»»µØÍ¼
+		map.setmapNo(mapNo);//åˆ‡æ¢åœ°å›¾
 		switch(mapNo)
 		{
 		case 0:
@@ -275,13 +275,13 @@ public class MainWindow extends JFrame
 		NpcOffsetx=x>mapxmax-403?mapxmax-806:(x<806?0:x-403);
 		NpcOffsety=-(y>mapymax-315?mapymax-629:(y<629?0:y-315));
 		menu.setVisible(false);
-		for(ButtonBase temp:menubutton)//²Ëµ¥°´Å¥
+		for(ButtonBase temp:menubutton)//èœå•æŒ‰é’®
 			temp.setVisible(false);
 		MainWindow.this.repaint();
 		new Thread(DropTest).start();
 		new Thread(Bgm).start();
 	}
-	public void NPCshow()//ÏÔÊ¾NPC
+	public void NPCshow()//æ˜¾ç¤ºNPC
 	{
 		switch(mapNo)
 		{
@@ -290,7 +290,7 @@ public class MainWindow extends JFrame
 			for(int i=0;i<7;i++)
 				npc[i].setVisible(true);
 			npc[0].setBounds(2350-NpcOffsetx,720+NpcOffsety,123,101);
-			npc[1].setBounds(1300-NpcOffsetx,695+NpcOffsety,170,120);//ÏÍÕß
+			npc[1].setBounds(1300-NpcOffsetx,695+NpcOffsety,170,120);//è´¤è€…
 			npc[2].setBounds(732-NpcOffsetx,515+NpcOffsety,97,103);
 			npc[3].setBounds(465-NpcOffsetx,705+NpcOffsety,97,109);
 			npc[4].setBounds(788-NpcOffsetx,695+NpcOffsety,78,122);
@@ -344,17 +344,17 @@ public class MainWindow extends JFrame
 		{
 			for(int i=0;i<7;i++)
 				npc[i].setVisible(false);
-			npc[7].setBounds(300-NpcOffsetx,230+NpcOffsety,78,91);//Âó¼ª
+			npc[7].setBounds(300-NpcOffsetx,230+NpcOffsety,78,91);//éº¦å‰
 			break;
 		}
 		}
 	}
 	public void movesee(int m)
 	{
-		System.out.printf("µØÍ¼ÒÆ¶¯Æô¶¯\n");
+		System.out.printf("åœ°å›¾ç§»åŠ¨å¯åŠ¨\n");
 			ren.setVisible(false);
 			int i=m;
-			//ÏòÉÏ
+			//å‘ä¸Š
 			while(i-->0)
 			{
 				try
@@ -384,7 +384,7 @@ public class MainWindow extends JFrame
 			{
 				e1.printStackTrace();
 			}
-			//ÏòÏÂ
+			//å‘ä¸‹
 			while(i++<m)
 			{
 				try
@@ -429,15 +429,15 @@ public class MainWindow extends JFrame
 			}
 	}
 	
-	public class TestRunnable  implements Runnable//Ïß³ÌÄÚ²¿Àà
+	public class TestRunnable  implements Runnable//çº¿ç¨‹å†…éƒ¨ç±»
 	{
-		private int Note;/**Ö´ĞĞ±êÇ©
-		 * 0=ÏÂ×¹
-		 * 1=ÌøÔ¾
-		 * 2=¹¥»÷
-		 * 3=¹ÖÎï
+		private int Note;/**æ‰§è¡Œæ ‡ç­¾
+		 * 0=ä¸‹å 
+		 * 1=è·³è·ƒ
+		 * 2=æ”»å‡»
+		 * 3=æ€ªç‰©
 		 * */
-		public TestRunnable(int num)//¹¹Ôì±êÇ©
+		public TestRunnable(int num)//æ„é€ æ ‡ç­¾
 		{
 			Note=num;
 		}
@@ -447,10 +447,10 @@ public class MainWindow extends JFrame
 			{
 			case 0:
 			{	
-				if(droping==0)//È·±£Í¬Ò»Ê±¼äÖ»Ö´ĞĞÒ»¸öÏÂ×¹Ïß³Ì
+				if(droping==0)//ç¡®ä¿åŒä¸€æ—¶é—´åªæ‰§è¡Œä¸€ä¸ªä¸‹å çº¿ç¨‹
 				{
-					droping=1;//´ú±íÒÑ¾­ÔÚÏÂ×¹
-					jumping=1;//ÏÂ×¹ÖĞ½ûÖ¹ÌøÔ¾
+					droping=1;//ä»£è¡¨å·²ç»åœ¨ä¸‹å 
+					jumping=1;//ä¸‹å ä¸­ç¦æ­¢è·³è·ƒ
 					if(Drop!=2)
 					Drop=map.ToGround();
 					while(Drop==1)
@@ -479,19 +479,19 @@ public class MainWindow extends JFrame
 						if(attacking==0)
 						ren.setzhuangtai(Direction==0?9:8);
 					}
-					droping=0;//ÏÂ×¹½áÊø
-					jumping=0;//ÌøÔ¾½áÊø
+					droping=0;//ä¸‹å ç»“æŸ
+					jumping=0;//è·³è·ƒç»“æŸ
 					//MainWindow.this.repaint();
 				}
 				break;
 			}
 			case 1:
 			{
-				if(jumping==0)//È·±£Í¬Ò»Ê±¼äÖ»ÄÜÖ´ĞĞÒ»¸öÌøÔ¾Ïß³Ì
+				if(jumping==0)//ç¡®ä¿åŒä¸€æ—¶é—´åªèƒ½æ‰§è¡Œä¸€ä¸ªè·³è·ƒçº¿ç¨‹
 				{
-					jumping=1;//´ú±íÕıÔÚÌøÔ¾
-					Drop=1;//´ú±íÈËÎïÒÔÀë¿ªµØÃæ
-					droping=1;//ÌøÔ¾ÖĞÍ¾½ûÖ¹Æô¶¯ÏÂ×¹Ïß³Ì
+					jumping=1;//ä»£è¡¨æ­£åœ¨è·³è·ƒ
+					Drop=1;//ä»£è¡¨äººç‰©ä»¥ç¦»å¼€åœ°é¢
+					droping=1;//è·³è·ƒä¸­é€”ç¦æ­¢å¯åŠ¨ä¸‹å çº¿ç¨‹
 					for(int i=0;i<100;i++)
 					{
 						try
@@ -521,8 +521,8 @@ public class MainWindow extends JFrame
 					{
 						e1.printStackTrace();
 					}
-					droping=0;//ÔÊĞíÏÂ×¹
-					new Thread(DropTest).start();//Æô¶¯ÏÂ×¹
+					droping=0;//å…è®¸ä¸‹å 
+					new Thread(DropTest).start();//å¯åŠ¨ä¸‹å 
 				}
 				break;
 			}
@@ -571,12 +571,12 @@ public class MainWindow extends JFrame
 							if(!(
 									attacking==1&&
 									(Direction==0?((tempgw.getx()<=map.getrenx()&&tempgw.getx()>=map.getrenx()-115)?1:0):
-										          ((tempgw.getx()>=map.getrenx()&&tempgw.getx()<=map.getrenx()+115)?1:0))==1&&  //¹ÖÔÚË®Æ½·½ÏòÉÏ±»¹¥»÷·¶Î§ÅĞ¶Ï  
-									(tempgw.gety()<=map.getreny()&&tempgw.gety()>=map.getreny()-100) // ¹ÖÔÚÈË×İ·½Ïò±»¹¥»÷·¶Î§
+										          ((tempgw.getx()>=map.getrenx()&&tempgw.getx()<=map.getrenx()+115)?1:0))==1&&  //æ€ªåœ¨æ°´å¹³æ–¹å‘ä¸Šè¢«æ”»å‡»èŒƒå›´åˆ¤æ–­  
+									(tempgw.gety()<=map.getreny()&&tempgw.gety()>=map.getreny()-100) // æ€ªåœ¨äººçºµæ–¹å‘è¢«æ”»å‡»èŒƒå›´
 								)  
 							  )
 							{
-								if(tempgw.getTarget()==0)  //¹Ö·Ç¹¥»÷×´Ì¬
+								if(tempgw.getTarget()==0)  //æ€ªéæ”»å‡»çŠ¶æ€
 								{
 									switch((int)(Math.random()*1000)%6)
 									{
@@ -618,7 +618,7 @@ public class MainWindow extends JFrame
 										}
 									}
 									//tempgw.setzhuangtai((int)(Math.random()*1000)%4);
-								} //½Ó´¥¹ÖÎï
+								} //æ¥è§¦æ€ªç‰©
 								else
 								{
 							
@@ -675,7 +675,7 @@ public class MainWindow extends JFrame
 									}
 									
 									//tempgw.setzhuangtai(tempgw.getx()>map.getrenx()?2:3);
-								}   //¹ÖÎï¹¥»÷×´Ì¬
+								}   //æ€ªç‰©æ”»å‡»çŠ¶æ€
 								try
 								{
 									Thread.sleep(20);
@@ -692,7 +692,7 @@ public class MainWindow extends JFrame
 								{
 								case 5:if(tempgw.getx()>=tempgw.getxmin()) tempgw.movex(-5);tempgw.setzhuangtai(5);break;
 								case 4:if(tempgw.getx()<=tempgw.getxmax()) tempgw.movex(5);tempgw.setzhuangtai(4);break;
-								}     //±»¹¥»÷
+								}     //è¢«æ”»å‡»
 								//tempgw.setzhuangtai(Direction==0?5:4);
 								tempgw.Battack(statusbar.getatk()+(int)(Math.random()*100));
 								try
@@ -1061,7 +1061,7 @@ public class MainWindow extends JFrame
 			}
 			case 12:
 			{
-				//Âó¼ª
+				//éº¦å‰
 				
 			}
 			
@@ -1071,7 +1071,7 @@ public class MainWindow extends JFrame
 				Time d = ZERO.getSeconds(14);
 				SoundBuffer bgm = new SoundBuffer();
 				try {
-				    bgm.loadFromFile(Paths.get("ÒôÀÖËØ²Ä","2.wav"));
+				    bgm.loadFromFile(Paths.get("éŸ³ä¹ç´ æ","2.wav"));  //load the Back Ground Music
 //				    d = bgm.getDuration();
 				    System.out.print(d);
 				} catch(IOException ex) {
@@ -1080,11 +1080,12 @@ public class MainWindow extends JFrame
 				//Create a sound and set its buffer
 				Sound sound = new Sound();
 				sound.setBuffer(bgm);
-				sound.play();
+				sound.play();     //Play the music
 				Clock c = new Clock();
 				long s =  c.getElapsedTime().asMilliseconds();
 				while(true) {
-					if(c.getElapsedTime().asMilliseconds()==(s+15000)) {
+					if(c.getElapsedTime().asMilliseconds()==(s+1500000))   //1500sec
+					{
 						c.restart();
 						s=c.getElapsedTime().asMilliseconds();
 						sound.play();
@@ -1094,34 +1095,34 @@ public class MainWindow extends JFrame
 		}	
 		}
 	}
-	public class mouselisten implements MouseListener,MouseMotionListener//Êó±ê¼àÌı
+	public class mouselisten implements MouseListener,MouseMotionListener//é¼ æ ‡ç›‘å¬
 	{
-		private int assembly;/**×é¼ş
-		 * 0=°´Å¥
-		 * 1=£¿
+		private int assembly;/**ç»„ä»¶
+		 * 0=æŒ‰é’®
+		 * 1=ï¼Ÿ
 		 * 2=NPC
-		 * 3=¶Ô»°¿ò
-		 * 4=ÈÎÎñ¿ò
+		 * 3=å¯¹è¯æ¡†
+		 * 4=ä»»åŠ¡æ¡†
 		 */
-		private int menu_num;/**²Ëµ¥±êÊ¶
-		 * 0=ÈËÎï×°±¸
-		 * 1=ÎïÆ·µÀ¾ß
-		 * 2=ÈËÎï¼¼ÄÜ
-		 * 3=ÈËÎïÄÜÁ¦
-		 * 4=ÈÎÎñĞÅÏ¢
-		 * 5=°´¼üÉèÖÃ
-		 * 6=±£´æ´æµµ
-		 * 7=ÏµÍ³°´Å¥
-		 * 8=¶Ô»°¿òÈ·ÈÏ
-		 * 9=¶Ô»°¿òÍ£Ö¹¶Ô»°
+		private int menu_num;/**èœå•æ ‡è¯†
+		 * 0=äººç‰©è£…å¤‡
+		 * 1=ç‰©å“é“å…·
+		 * 2=äººç‰©æŠ€èƒ½
+		 * 3=äººç‰©èƒ½åŠ›
+		 * 4=ä»»åŠ¡ä¿¡æ¯
+		 * 5=æŒ‰é”®è®¾ç½®
+		 * 6=ä¿å­˜å­˜æ¡£
+		 * 7=ç³»ç»ŸæŒ‰é’®
+		 * 8=å¯¹è¯æ¡†ç¡®è®¤
+		 * 9=å¯¹è¯æ¡†åœæ­¢å¯¹è¯
 		 */
-		public mouselisten(int a,int b)//¹¹Ôì¼àÌıÀàĞÍ
+		public mouselisten(int a,int b)//æ„é€ ç›‘å¬ç±»å‹
 		{
 			assembly=a;
 			menu_num=b;
 		}
-		public void mouseClicked(MouseEvent e){}//Êó±êµ¥»÷ 		
-		public void mousePressed(MouseEvent e)//Êó±ê°´ÏÂ
+		public void mouseClicked(MouseEvent e){}//é¼ æ ‡å•å‡» 		
+		public void mousePressed(MouseEvent e)//é¼ æ ‡æŒ‰ä¸‹
 		{
 			switch(assembly)
 			{
@@ -1210,11 +1211,11 @@ public class MainWindow extends JFrame
 			}
 			}
 		}
-		public void mouseReleased(MouseEvent e)//Êó±êÊÍ·Å
+		public void mouseReleased(MouseEvent e)//é¼ æ ‡é‡Šæ”¾
 		{
 			switch(assembly)
 			{
-			case 0://ÏµÍ³°´Å¥
+			case 0://ç³»ç»ŸæŒ‰é’®
 			{
 				switch(menu_num)
 				{
@@ -1257,7 +1258,7 @@ public class MainWindow extends JFrame
 				{
 					nextb.setstate(0);
 					progress++;
-					System.out.printf("µ±Ç°½ø¶È£º%d\n",progress);
+					System.out.printf("å½“å‰è¿›åº¦ï¼š%d\n",progress);
 					dialog.setVisible(false);
 					endb.setVisible(false);
 					nextb.setVisible(false);
@@ -1349,7 +1350,7 @@ public class MainWindow extends JFrame
 			}
 			}
 		}
-		public void mouseEntered(MouseEvent e)//Êó±ê½øÈë
+		public void mouseEntered(MouseEvent e)//é¼ æ ‡è¿›å…¥
 		{
 			switch(assembly)
 			{
@@ -1387,11 +1388,11 @@ public class MainWindow extends JFrame
 			
 			}
 		}
-		public void mouseExited(MouseEvent e)//Êó±êÀë¿ª
+		public void mouseExited(MouseEvent e)//é¼ æ ‡ç¦»å¼€
 		{
 			switch(assembly)
 			{
-			case 0://ÏµÍ³°´Å¥
+			case 0://ç³»ç»ŸæŒ‰é’®
 			{
 				{
 					switch(menu_num)
@@ -1428,13 +1429,13 @@ public class MainWindow extends JFrame
 			}
 		}
 
-		public void mouseDragged(MouseEvent e)//°´ÏÂÍÏ¶¯
+		public void mouseDragged(MouseEvent e)//æŒ‰ä¸‹æ‹–åŠ¨
 		{
 			switch(assembly)
 			{
 			case 3:
 			{
-				//ÈÆ°É£¡Êó±êÆÁÄ»Î»ÖÃ-´°¿ÚÎ»ÖÃ=Êó±êÔÚ´°¿ÚÄÚµÄÏà¶Ô×ø±ê£¬ÔÙ¼õÈ¥°´ÏÂÊó±êÊ±»ñÈ¡µÄÆÁÄ»×ø±ê ÖÕÓÚÊµÏÖ¶¨µãÍÏ¶¯£¡
+				//ç»•å§ï¼é¼ æ ‡å±å¹•ä½ç½®-çª—å£ä½ç½®=é¼ æ ‡åœ¨çª—å£å†…çš„ç›¸å¯¹åæ ‡ï¼Œå†å‡å»æŒ‰ä¸‹é¼ æ ‡æ—¶è·å–çš„å±å¹•åæ ‡ ç»ˆäºå®ç°å®šç‚¹æ‹–åŠ¨ï¼
 				dialog.setBounds(e.getXOnScreen()-MainWindow.this.getX()-diax,e.getYOnScreen()-MainWindow.this.getY()-diay, 515, 180);
 				nextb.setBounds(e.getXOnScreen()-MainWindow.this.getX()-diax+475, e.getYOnScreen()-MainWindow.this.getY()-diay+160, 37, 20);
 				endb.setBounds(e.getXOnScreen()-MainWindow.this.getX()-diax+5, e.getYOnScreen()-MainWindow.this.getY()-diay+160, 90, 20);
@@ -1455,11 +1456,11 @@ public class MainWindow extends JFrame
 		
 		
 	}
-	public class keypress extends KeyAdapter//¼üÅÌ¼àÌı
+	public class keypress extends KeyAdapter//é”®ç›˜ç›‘å¬
 	{
-		public void keyPressed(KeyEvent e)//°´ÏÂ¡¢°´×¡
+		public void keyPressed(KeyEvent e)//æŒ‰ä¸‹ã€æŒ‰ä½
 		{
-			if(e.getKeyCode()==KeyEvent.VK_W)//ÉÏ ²âÊÔÓÃ
+			if(e.getKeyCode()==KeyEvent.VK_W)//ä¸Š æµ‹è¯•ç”¨
 			{
 				/*if(ren.gety()>=100||map.getreny()<=100)
 					ren.movey(-5);
@@ -1504,10 +1505,10 @@ public class MainWindow extends JFrame
 					new Thread(Jump).start();
 				}
 			}
-			if(e.getKeyCode()==KeyEvent.VK_S)//ÏÂ
+			if(e.getKeyCode()==KeyEvent.VK_S)//ä¸‹
 			{			
 				
-				if(Drop==0)//È·±£ÈËÎïÔÚµØÃæÉÏ
+				if(Drop==0)//ç¡®ä¿äººç‰©åœ¨åœ°é¢ä¸Š
 					ren.setzhuangtai(Direction==0?12:13);
 				if(map.CanShin()==1)
 				{
@@ -1533,12 +1534,12 @@ public class MainWindow extends JFrame
 					new Thread(DropTest).start();
 				}
 			}
-			if(e.getKeyCode()==KeyEvent.VK_D)//ÓÒ
+			if(e.getKeyCode()==KeyEvent.VK_D)//å³
 			{
 				if(Drop!=2)
 				{
 				Direction=1;
-				//System.out.printf("Drop=%d£¬movetime=%d\n",Drop,movetime);
+				//System.out.printf("Drop=%dï¼Œmovetime=%d\n",Drop,movetime);
 				if(Drop==0)
 				{
 				ren.setzhuangtai(movetime++%4);
@@ -1563,7 +1564,7 @@ public class MainWindow extends JFrame
 				new Thread(DropTest).start();
 				}
 			}
-			if(e.getKeyCode()==KeyEvent.VK_A)//×ó
+			if(e.getKeyCode()==KeyEvent.VK_A)//å·¦
 			{
 				if(Drop!=2)
 				{
@@ -1603,7 +1604,7 @@ public class MainWindow extends JFrame
 			}
 			if(e.getKeyCode()==KeyEvent.VK_K)
 			{
-				if(Drop==0);//È·±£Ö»ÄÜÔÚµØÃæÉÏÌøÔ¾
+				if(Drop==0);//ç¡®ä¿åªèƒ½åœ¨åœ°é¢ä¸Šè·³è·ƒ
 				{
 					ren.setzhuangtai(Direction==0?11:10);
 					if(moving==0)
@@ -1613,7 +1614,7 @@ public class MainWindow extends JFrame
 				}
 			}
 		}		
-		public void keyReleased(KeyEvent e)//ÊÍ·Å
+		public void keyReleased(KeyEvent e)//é‡Šæ”¾
 		{
 			if(e.getKeyCode()==KeyEvent.VK_D)
 			{	if(Drop==0)
