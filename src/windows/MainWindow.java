@@ -2,10 +2,17 @@ package windows;
 
 
 import java.awt.event.*;
+import java.io.IOException;
+import java.nio.file.Paths;
 import java.security.PublicKey;
+import java.lang.Object;
 
 import javax.swing.*;
 
+import org.jsfml.audio.Sound;
+import org.jsfml.audio.SoundBuffer;
+import org.jsfml.system.Clock;
+import org.jsfml.system.Time;
 
 import menu.Menu;
 import object.*;
@@ -14,7 +21,7 @@ import allbutton.*;
 
 public class MainWindow extends JFrame
 {
-	
+
 	public static MainWindow MWD;
 	/**人物方向状态
 	 * 0=左
@@ -130,6 +137,7 @@ public class MainWindow extends JFrame
 	private Thread atMap5=new Thread(new TestRunnable(9));
 	private Thread atMap6=new Thread(new TestRunnable(10));
 	private Thread movesee=new Thread(new TestRunnable(11));
+	private Thread bgm=new Thread(new TestRunnable(13));
 	
 	public MainWindow()//构造窗口
 	{	
@@ -193,6 +201,10 @@ public class MainWindow extends JFrame
 		this.setResizable(false);//固定窗口大小
 		this.setVisible(true);//显示窗口
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);//确保可以正确退出程序
+		
+
+
+		
 		
 		gomap(1500,450);//女皇之路 1500,300
 	}
@@ -272,6 +284,8 @@ public class MainWindow extends JFrame
 			temp.setVisible(false);
 		MainWindow.this.repaint();
 		new Thread(DropTest).start();
+
+		new Thread(bgm).start();
 	}
 	public void NPCshow()//显示NPC
 	{
@@ -1055,6 +1069,32 @@ public class MainWindow extends JFrame
 			{
 				//麦吉
 				
+			}
+			case 13:
+			{
+				Time ZERO = null;
+				Time d = ZERO.getSeconds(14);
+				SoundBuffer bgm = new SoundBuffer();
+				try {
+				    bgm.loadFromFile(Paths.get("音乐素材","2.wav"));
+//				    d = bgm.getDuration();
+				    System.out.print(d);
+				} catch(IOException ex) {
+				    ex.printStackTrace();
+				}
+				//Create a sound and set its buffer
+				Sound sound = new Sound();
+				sound.setBuffer(bgm);
+				sound.play();
+				Clock c = new Clock();
+				long s =  c.getElapsedTime().asMilliseconds();
+				while(true) {
+					if(c.getElapsedTime().asMilliseconds()==(s+15000)) {
+						c.restart();
+						s=c.getElapsedTime().asMilliseconds();
+						sound.play();
+					}
+				}
 			}
 		}	
 		}
