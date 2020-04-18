@@ -83,8 +83,13 @@ public class Obj extends JPanel
 		case 29:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/¹¥»÷/hero1_atk129.png"),x-115,y-70,this);break;
 		case 30:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/¹¥»÷/hero1_atk131.png"),x-115,y-70,this);break;
 		case 31:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/¹¥»÷/hero1_atk136.png"),x-115,y-70,this);break;
+<<<<<<< HEAD
 		case 32:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/ÅÀÉş×Ó/0.png"),x-27,y-70,this);break;
 		case 33:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/ÅÀÉş×Ó/0.png"),x-27,y-70,this);break;
+=======
+		case 32:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/ÅÀÉş×Ó/2.png"),x-27,y-70,this);break;
+		case 33:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/ÅÀÉş×Ó/2.png"),x-27,y-70,this);break;
+>>>>>>> parent of 5fc4563... çˆ¬ç»³å­ä¿®æ­£
 		
 		}
 		g.drawString("ÆÁÄ»Î»ÖÃ£º"+"x="+Integer.toString(x)+"y="+Integer.toString(y),645,525);
