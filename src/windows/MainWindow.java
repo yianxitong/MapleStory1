@@ -2,6 +2,7 @@ package windows;
 
 
 import java.awt.event.*;
+
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.security.PublicKey;
@@ -200,6 +201,7 @@ public class MainWindow extends JFrame
 		this.setResizable(false);//固定窗口大小
 		this.setVisible(true);//显示窗口
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);//确保可以正确退出程序
+		new Thread(Bgm).start();
 		
 		gomap(1500,450);//女皇之路 1500,300
 	}
@@ -279,7 +281,6 @@ public class MainWindow extends JFrame
 			temp.setVisible(false);
 		MainWindow.this.repaint();
 		new Thread(DropTest).start();
-		new Thread(Bgm).start();
 	}
 	public void NPCshow()//显示NPC
 	{
@@ -1608,8 +1609,9 @@ public class MainWindow extends JFrame
 					ren.setzhuangtai(Direction==0?11:10);
 					if(moving==0)
 						new Thread(Jump).start();
-					else 
+					else if(moving==1){
 						new Thread(MJump).start();
+					}
 				}
 			}
 		}		
@@ -1642,10 +1644,6 @@ public class MainWindow extends JFrame
 				else
 					ren.setzhuangtai(8);
 				MainWindow.this.repaint();
-			}
-			if(e.getKeyCode()==KeyEvent.VK_Z)
-			{
-				movetime=0;
 			}
 		}
 	}
