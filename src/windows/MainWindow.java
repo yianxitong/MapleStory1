@@ -1073,7 +1073,7 @@ public class MainWindow extends JFrame
 				try {
 				    bgm.loadFromFile(Paths.get("“Ù¿÷Àÿ≤ƒ","2.wav"));
 //				    d = bgm.getDuration();
-				    System.out.print(d);
+//				    System.out.print(d);
 				} catch(IOException ex) {
 				    ex.printStackTrace();
 				}
@@ -1654,4 +1654,5 @@ public class MainWindow extends JFrame
 	{
 		MWD=new MainWindow();
 	}
+	
 }
