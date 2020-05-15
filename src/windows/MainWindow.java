@@ -108,7 +108,7 @@ public class MainWindow extends JFrame
 			{
 				new Monster(2,650,300,1270,500),new Monster(2,930,300,1270,500),
 				new Monster(2,210,660,1100,50),new Monster(2,500,660,1100,50),new Monster(2,720,660,1100,50),new Monster(2,960,660,1100,50),
-				new Monster(3,340,1020,1365,0),new Monster(3,720,1020,1365,0),new Monster(3,1170,1020,1365,0)
+				new Monster(3,340,1020,1365,0),new Monster(3,720,1020,1365,0),new Monster(5,1170,1020,1365,0)
 			},
 			{
 				new Monster(4,1000,290,1570,630),
