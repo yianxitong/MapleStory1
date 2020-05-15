@@ -110,18 +110,6 @@ public class MainWindow extends JFrame
 				new Monster(2,210,660,1100,50),new Monster(2,500,660,1100,50),new Monster(2,720,660,1100,50),new Monster(2,960,660,1100,50),
 				new Monster(3,340,1020,1365,0),new Monster(3,720,1020,1365,0),new Monster(5,1170,1020,1365,0)
 			},
-			{
-				new Monster(4,1000,290,1570,630),
-				new Monster(4,100,410,280,0),
-				new Monster(4,500,770,1090,0),new Monster(4,1300,830,1570,1100),
-				new Monster(4,400,1130,600,170),new Monster(4,1000,1070,1570,630),
-			},
-			{
-				new Monster(5,1200,910,1470,1230),
-				new Monster(5,500,900,700,30),
-				new Monster(5,700,970,1260,380),
-				new Monster(5,350,535,490,250),
-			}
 		};    //id,x,y,x-max,y-max
 	private Monster newgw=null;//新生怪物临时引用
 	private Thread DropTest=new Thread(new TestRunnable(0));//坠落线程
