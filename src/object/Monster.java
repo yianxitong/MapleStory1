@@ -183,14 +183,14 @@ public class Monster extends JPanel
 		{
 			switch(zhuangtai)
 			{
-			case 0:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/¹ÖÎï/¯l´Ì¿Í/Õ¾Á¢/×ó.gif"),x-Offsetx-41,y+Offsety-63,this);break;
-			case 1:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/¹ÖÎï/¯l´Ì¿Í/Õ¾Á¢/ÓÒ.gif"),x-Offsetx-16,y+Offsety-63,this);break;
-			case 2:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/¹ÖÎï/¯l´Ì¿Í/ÒÆ¶¯/×ó.gif"),x-Offsetx-29,y+Offsety-58,this);break;
-			case 3:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/¹ÖÎï/¯l´Ì¿Í/ÒÆ¶¯/ÓÒ.gif"),x-Offsetx-26,y+Offsety-58,this);break;
-			case 4:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/¹ÖÎï/¯l´Ì¿Í/±»¹¥»÷/×ó.png"),x-Offsetx-41,y+Offsety-72,this);break;
-			case 5:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/¹ÖÎï/¯l´Ì¿Í/±»¹¥»÷/ÓÒ.png"),x-Offsetx-37,y+Offsety-72,this);break;
-			case 6:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/¹ÖÎï/¯l´Ì¿Í/¹¥»÷/×ó.gif"),x-Offsetx-151,y+Offsety-60,this);break;
-			case 7:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/¹ÖÎï/¯l´Ì¿Í/¹¥»÷/ÓÒ.gif"),x-Offsetx-37,y+Offsety-60,this);break;
+			case 0:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/²»¶¯/enemy1_hold_00001.png"),x-Offsetx-41,y+Offsety-85,this);break;
+			case 1:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/²»¶¯/enemy1_hold_00000.png"),x-Offsetx-16,y+Offsety-85,this);break;
+			case 2:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/×ß/×ó×ß.gif"),x-Offsetx-50,y+Offsety-80,this);break;
+			case 3:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/×ß/ÓÒ×ß.gif"),x-Offsetx-26,y+Offsety-80,this);break;
+			case 4:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/°¤×á/azz.png"),x-Offsetx-41,y+Offsety-72,this);break;
+			case 5:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/°¤×á/azy.png"),x-Offsetx-37,y+Offsety-72,this);break;
+			case 6:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/²»¶¯/enemy1_hold_00000.png"),x-Offsetx-151,y+Offsety-60,this);break;
+			case 7:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/²»¶¯/enemy1_hold_00000.png"),x-Offsetx-37,y+Offsety-60,this);break;
 			}
 			break;
 		}
@@ -198,14 +198,14 @@ public class Monster extends JPanel
 		{
 			switch(zhuangtai)
 			{
-			case 0:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/¹ÖÎï/ÅÖ´Ì¿Í/Õ¾Á¢/×ó.gif"),x-Offsetx-48,y+Offsety-71,this);break;
-			case 1:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/¹ÖÎï/ÅÖ´Ì¿Í/Õ¾Á¢/ÓÒ.gif"),x-Offsetx-63,y+Offsety-71,this);break;
-			case 2:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/¹ÖÎï/ÅÖ´Ì¿Í/ÒÆ¶¯/×ó.gif"),x-Offsetx-50,y+Offsety-71,this);break;
-			case 3:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/¹ÖÎï/ÅÖ´Ì¿Í/ÒÆ¶¯/ÓÒ.gif"),x-Offsetx-68,y+Offsety-71,this);break;
-			case 4:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/¹ÖÎï/ÅÖ´Ì¿Í/±»¹¥»÷/×ó.png"),x-Offsetx-51,y+Offsety-89,this);break;
-			case 5:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/¹ÖÎï/ÅÖ´Ì¿Í/±»¹¥»÷/ÓÒ.png"),x-Offsetx-68,y+Offsety-89,this);break;
-			case 6:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/¹ÖÎï/ÅÖ´Ì¿Í/¹¥»÷/×ó.gif"),x-Offsetx-67,y+Offsety-76,this);break;
-			case 7:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/¹ÖÎï/ÅÖ´Ì¿Í/¹¥»÷/ÓÒ.gif"),x-Offsetx-78,y+Offsety-76,this);break;
+			case 0:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/²»¶¯/enemy2_hold_00050.png"),x-Offsetx-41,y+Offsety-120,this);break;
+			case 1:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/²»¶¯/enemy2_hold_00051.png"),x-Offsetx-58,y+Offsety-120,this);break;
+			case 2:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/×ß/×ó×ß2.gif"),x-Offsetx-43,y+Offsety-120,this);break;
+			case 3:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/×ß/ÓÒ×ß2.gif"),x-Offsetx-68,y+Offsety-120,this);break;
+			case 4:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/°¤×á/ÅÖ×ó.png"),x-Offsetx-43,y+Offsety-120,this);break;
+			case 5:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/°¤×á/ÅÖÓÒ.png"),x-Offsetx-72,y+Offsety-120,this);break;
+			case 6:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/¹¥»÷/ÅÖ×ó.gif"),x-Offsetx-84,y+Offsety-100,this);break;
+			case 7:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/¹¥»÷/ÅÖÓÒ.gif"),x-Offsetx-97,y+Offsety-100,this);break;
 			}
 			
 			break;
@@ -214,14 +214,14 @@ public class Monster extends JPanel
 		{
 			switch(zhuangtai)
 			{
-			case 0:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/¹ÖÎï/¾«Ó¢¯l´Ì¿Í/Õ¾Á¢/×ó.gif"),x-Offsetx-37,y+Offsety-67,this);break;
-			case 1:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/¹ÖÎï/¾«Ó¢¯l´Ì¿Í/Õ¾Á¢/ÓÒ.gif"),x-Offsetx-28,y+Offsety-67,this);break;
-			case 2:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/¹ÖÎï/¾«Ó¢¯l´Ì¿Í/ÒÆ¶¯/×ó.gif"),x-Offsetx-39,y+Offsety-64,this);break;
-			case 3:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/¹ÖÎï/¾«Ó¢¯l´Ì¿Í/ÒÆ¶¯/ÓÒ.gif"),x-Offsetx-25,y+Offsety-64,this);break;
-			case 4:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/¹ÖÎï/¾«Ó¢¯l´Ì¿Í/±»¹¥»÷/×ó.png"),x-Offsetx-45,y+Offsety-69,this);break;
-			case 5:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/¹ÖÎï/¾«Ó¢¯l´Ì¿Í/±»¹¥»÷/ÓÒ.png"),x-Offsetx-50,y+Offsety-69,this);break;
-			case 6:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/¹ÖÎï/¾«Ó¢¯l´Ì¿Í/¹¥»÷/×ó.gif"),x-Offsetx-124,y+Offsety-128,this);break;
-			case 7:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/¹ÖÎï/¾«Ó¢¯l´Ì¿Í/¹¥»÷/ÓÒ.gif"),x-Offsetx-29,y+Offsety-128,this);break;
+			case 0:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/²»¶¯/Êİ×ó.png"),x-Offsetx-37,y+Offsety-100,this);break;
+			case 1:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/²»¶¯/ÊİÓÒ.png"),x-Offsetx-28,y+Offsety-100,this);break;
+			case 2:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/×ß/Êİ×ó.gif"),x-Offsetx-39,y+Offsety-85,this);break;
+			case 3:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/×ß/ÊİÓÒ.gif"),x-Offsetx-25,y+Offsety-85,this);break;
+			case 4:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/°¤×á/Êİ×ó.png"),x-Offsetx-45,y+Offsety-85,this);break;
+			case 5:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/°¤×á/ÊİÓÒ.png"),x-Offsetx-50,y+Offsety-85,this);break;
+			case 6:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/¹¥»÷/Êİ×ó.gif"),x-Offsetx-124,y+Offsety-90,this);break;
+			case 7:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/¹¥»÷/ÊİÓÒ.gif"),x-Offsetx-29,y+Offsety-90,this);break;
 			}
 			//System.out.printf("%d\n",Offsetx);
 			break;
@@ -230,14 +230,14 @@ public class Monster extends JPanel
 		{
 			switch(zhuangtai)
 			{
-			case 0:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/¹ÖÎï/¾«Ó¢ÅÖ´Ì¿Í/Õ¾Á¢/×ó.gif"),x-Offsetx-41,y+Offsety-84,this);break;
-			case 1:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/¹ÖÎï/¾«Ó¢ÅÖ´Ì¿Í/Õ¾Á¢/ÓÒ.gif"),x-Offsetx-58,y+Offsety-84,this);break;
-			case 2:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/¹ÖÎï/¾«Ó¢ÅÖ´Ì¿Í/ÒÆ¶¯/×ó.gif"),x-Offsetx-43,y+Offsety-84,this);break;
-			case 3:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/¹ÖÎï/¾«Ó¢ÅÖ´Ì¿Í/ÒÆ¶¯/ÓÒ.gif"),x-Offsetx-68,y+Offsety-84,this);break;
-			case 4:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/¹ÖÎï/¾«Ó¢ÅÖ´Ì¿Í/±»¹¥»÷/×ó.png"),x-Offsetx-43,y+Offsety-93,this);break;
-			case 5:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/¹ÖÎï/¾«Ó¢ÅÖ´Ì¿Í/±»¹¥»÷/ÓÒ.png"),x-Offsetx-72,y+Offsety-93,this);break;
-			case 6:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/¹ÖÎï/¾«Ó¢ÅÖ´Ì¿Í/¹¥»÷/×ó.gif"),x-Offsetx-84,y+Offsety-94,this);break;
-			case 7:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/¹ÖÎï/¾«Ó¢ÅÖ´Ì¿Í/¹¥»÷/ÓÒ.gif"),x-Offsetx-97,y+Offsety-94,this);break;
+			case 0:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/²»¶¯/ÅÖ×ó.png"),x-Offsetx-41,y+Offsety-120,this);break;
+			case 1:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/²»¶¯/ÅÖÓÒ.png"),x-Offsetx-58,y+Offsety-120,this);break;
+			case 2:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/×ß/×ó×ß2.gif"),x-Offsetx-43,y+Offsety-120,this);break;
+			case 3:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/×ß/ÓÒ×ß2.gif"),x-Offsetx-68,y+Offsety-120,this);break;
+			case 4:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/°¤×á/ÅÖ×ó.png"),x-Offsetx-43,y+Offsety-120,this);break;
+			case 5:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/°¤×á/ÅÖÓÒ.png"),x-Offsetx-72,y+Offsety-120,this);break;
+			case 6:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/¹¥»÷/ÅÖ×ó.gif"),x-Offsetx-84,y+Offsety-100,this);break;
+			case 7:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/¹¥»÷/ÅÖÓÒ.gif"),x-Offsetx-97,y+Offsety-100,this);break;
 			}
 			break;
 		}
@@ -245,8 +245,8 @@ public class Monster extends JPanel
 		{
 			switch(zhuangtai)
 			{
-			case 2:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/¹ÖÎï/Ê¯Í·ÈË/ÒÆ¶¯/×ó.gif"),x-Offsetx-70,y+Offsety-110,this);break;
-			case 3:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/¹ÖÎï/Ê¯Í·ÈË/ÒÆ¶¯/ÓÒ.gif"),x-Offsetx-64,y+Offsety-110,this);break;
+			case 2:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/×ß/Öí×ó.gif"),x-Offsetx-70,y+Offsety-180,this);break;
+			case 3:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/×ß/Öí×ó.gif"),x-Offsetx-64,y+Offsety-180,this);break;
 			}
 			break;
 		}
