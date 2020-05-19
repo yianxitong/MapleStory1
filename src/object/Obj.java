@@ -63,29 +63,28 @@ public class Obj extends JPanel
 		case 9:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/Õ¾Á¢/hero1_walk18_2.png"),x-30,y-68,this);break;
 		case 10:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/ÌøÔ¾/hero1_321.png"),x-96,y-68,this);break;
 		case 11:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/ÌøÔ¾/hero1_321_2.png"),x-86,y-68,this);break;
-		case 12:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/Å¿ÏÂ/Ãæ³¯×óÅ¿ÏÂ.png"),x-106,y-40,this);break;
+		case 12:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/Å¿ÏÂ/Ãæ³¯×óÅ¿ÏÂ.png"),x-70,y-40,this);break;
 		case 13:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/Å¿ÏÂ/Ãæ³¯ÓÒÅ¿ÏÂ.png"),x,y-40,this);break;
-		case 14:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/¹¥»÷/hero1_atk113_2.png"),x-115,y-70,this);break;
-		case 15:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/¹¥»÷/hero1_atk115_2.png"),x-115,y-70,this);break;
-		case 16:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/¹¥»÷/hero1_atk116_2.png"),x-115,y-70,this);break;
-		case 17:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/¹¥»÷/hero1_atk118_2.png"),x-115,y-70,this);break;
-		case 18:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/¹¥»÷/hero1_atk120_2.png"),x-115,y-70,this);break;
-		case 19:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/¹¥»÷/hero1_atk125_2.png"),x-115,y-70,this);break;
-		case 20:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/¹¥»÷/hero1_atk129_2.png"),x-115,y-70,this);break;
-		case 21:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/¹¥»÷/hero1_atk131_2.png"),x-115,y-70,this);break;
-		case 22:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/¹¥»÷/hero1_atk136_2.png"),x-115,y-70,this);break;
-		case 23:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/¹¥»÷/hero1_atk113.png"),x-115,y-70,this);break;
-		case 24:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/¹¥»÷/hero1_atk115.png"),x-115,y-70,this);break;
-		case 25:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/¹¥»÷/hero1_atk116.png"),x-115,y-70,this);break;
-		case 26:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/¹¥»÷/hero1_atk118.png"),x-115,y-70,this);break;
-		case 27:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/¹¥»÷/hero1_atk120.png"),x-115,y-70,this);break;
-		case 28:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/¹¥»÷/hero1_atk125.png"),x-115,y-70,this);break;
-		case 29:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/¹¥»÷/hero1_atk129.png"),x-115,y-70,this);break;
-		case 30:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/¹¥»÷/hero1_atk131.png"),x-115,y-70,this);break;
-		case 31:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/¹¥»÷/hero1_atk136.png"),x-115,y-70,this);break;
+		case 14:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/¹¥»÷/hero1_atk113_2.png"),x-90,y-70,this);break;
+		case 15:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/¹¥»÷/hero1_atk115_2.png"),x-90,y-70,this);break;
+		case 16:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/¹¥»÷/hero1_atk116_2.png"),x-90,y-70,this);break;
+		case 17:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/¹¥»÷/hero1_atk118_2.png"),x-90,y-70,this);break;
+		case 18:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/¹¥»÷/hero1_atk120_2.png"),x-90,y-70,this);break;
+		case 19:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/¹¥»÷/hero1_atk125_2.png"),x-90,y-70,this);break;
+		case 20:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/¹¥»÷/hero1_atk129_2.png"),x-90,y-70,this);break;
+		case 21:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/¹¥»÷/hero1_atk131_2.png"),x-90,y-70,this);break;
+		case 22:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/¹¥»÷/hero1_atk136_2.png"),x-90,y-70,this);break;
+		case 23:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/¹¥»÷/hero1_atk113.png"),x-90,y-70,this);break;
+		case 24:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/¹¥»÷/hero1_atk115.png"),x-90,y-70,this);break;
+		case 25:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/¹¥»÷/hero1_atk116.png"),x-90,y-70,this);break;
+		case 26:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/¹¥»÷/hero1_atk118.png"),x-90,y-70,this);break;
+		case 27:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/¹¥»÷/hero1_atk120.png"),x-90,y-70,this);break;
+		case 28:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/¹¥»÷/hero1_atk125.png"),x-90,y-70,this);break;
+		case 29:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/¹¥»÷/hero1_atk129.png"),x-90,y-70,this);break;
+		case 30:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/¹¥»÷/hero1_atk131.png"),x-90,y-70,this);break;
+		case 31:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/¹¥»÷/hero1_atk136.png"),x-90,y-70,this);break;
 		case 32:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/ÅÀÉþ×Ó/0.png"),x-27,y-70,this);break;
 		case 33:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Ö÷½Ç/ÅÀÉþ×Ó/0.png"),x-27,y-70,this);break;
-		
 		}
 		g.drawString("ÆÁÄ»Î»ÖÃ£º"+"x="+Integer.toString(x)+"y="+Integer.toString(y),645,525);
 	}
