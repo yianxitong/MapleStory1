@@ -216,8 +216,8 @@ public class Monster extends JPanel
 			{
 			case 0:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/²»¶¯/Êİ×ó.png"),x-Offsetx-37,y+Offsety-100,this);break;
 			case 1:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/²»¶¯/ÊİÓÒ.png"),x-Offsetx-28,y+Offsety-100,this);break;
-			case 2:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/×ß/Êİ×ó.gif"),x-Offsetx-39,y+Offsety-85,this);break;
-			case 3:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/×ß/ÊİÓÒ.gif"),x-Offsetx-25,y+Offsety-85,this);break;
+			case 2:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/×ß/Êİ×ó.gif"),x-Offsetx-39,y+Offsety-95,this);break;
+			case 3:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/×ß/ÊİÓÒ.gif"),x-Offsetx-25,y+Offsety-95,this);break;
 			case 4:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/°¤×á/Êİ×ó.png"),x-Offsetx-45,y+Offsety-85,this);break;
 			case 5:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/°¤×á/ÊİÓÒ.png"),x-Offsetx-50,y+Offsety-85,this);break;
 			case 6:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/¹¥»÷/Êİ×ó.gif"),x-Offsetx-124,y+Offsety-90,this);break;
@@ -231,7 +231,7 @@ public class Monster extends JPanel
 			switch(zhuangtai)
 			{
 			case 0:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/²»¶¯/ÅÖ×ó.png"),x-Offsetx-41,y+Offsety-120,this);break;
-			case 1:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/²»¶¯/ÅÖÓÒ.png"),x-Offsetx-58,y+Offsety-120,this);break;
+			case 1:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/²»¶¯/ÅÖÓÒ.png"),x-Offsetx-58,y+Offsety-120,this);break;
 			case 2:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/×ß/×ó×ß2.gif"),x-Offsetx-43,y+Offsety-120,this);break;
 			case 3:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/×ß/ÓÒ×ß2.gif"),x-Offsetx-68,y+Offsety-120,this);break;
 			case 4:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/°¤×á/ÅÖ×ó.png"),x-Offsetx-43,y+Offsety-120,this);break;
