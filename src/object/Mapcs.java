@@ -16,7 +16,6 @@ public class Mapcs extends JPanel
 	private int reny=0;
 	
 	private int mapNo=0;//地图编号
-	// 0=女皇之路
 	
 	public void setmapNo(int num)
 	{
@@ -278,7 +277,7 @@ public class Mapcs extends JPanel
 		case 0:
 		{
 			if(renx>100&&renx<160&&reny==790)
-				return new MapSwitch(1,1940,200);
+				return new MapSwitch(6,95,1200); //1,1940,200
 		}
 		case 1:
 		{
