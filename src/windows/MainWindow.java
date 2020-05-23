@@ -74,6 +74,9 @@ public class MainWindow extends JFrame
 	private NpcDialog dialog=new NpcDialog();//对话框
 	private DialogNextButton nextb=new DialogNextButton();//确认按钮
 	private DialogEndButton endb=new DialogEndButton();//停止对话按钮
+	private SkillWindow skillw=new SkillWindow();//技能框
+	private EquipmentWindow equw=new EquipmentWindow();//装备栏
+	private BackpackWindow backpackw=new BackpackWindow();//背包
 	
 	private Mapcs map=new Mapcs();//地图
 	private NPC []npc=//所有NPC
@@ -140,6 +143,10 @@ public class MainWindow extends JFrame
 		add(endb);//停止对话按钮
 		add(dialog);//对话框
 		add(taskw);
+		add(skillw);//技能栏
+		add(equw);//装备栏
+		add(backpackw);//背包
+		
 		for(NPC temp:npc)//NPC
 			add(temp);
 		add(ren);//人物
@@ -1113,7 +1120,7 @@ public class MainWindow extends JFrame
 		{
 			switch(assembly)
 			{
-			case 0:
+			case 0:	//按钮
 			{
 				switch(menu_num)
 				{
@@ -1206,10 +1213,34 @@ public class MainWindow extends JFrame
 			{
 				switch(menu_num)
 				{
-				case 0:case 1:case 2:case 3:case 5:case 6:
+				case 3:case 5:case 6:
 				{
 					menubutton[menu_num].setstate(0);
 					MainWindow.this.repaint();
+					break;
+				}
+				case 0:
+				{
+					menubutton[menu_num].setstate(0);
+					MainWindow.this.repaint();
+					equw.setVisible(!equw.ChangeDisplay());
+					equw.setBounds(200,200,200,300);
+					break;
+				}
+				case 1:
+				{
+					menubutton[menu_num].setstate(0);
+					MainWindow.this.repaint();
+					backpackw.setVisible(!backpackw.ChangeDisplay());
+					backpackw.setBounds(200,200,200,300);
+					break;
+				}
+				case 2:
+				{
+					menubutton[menu_num].setstate(0);
+					MainWindow.this.repaint();
+					skillw.setVisible(!skillw.ChangeDisplay());
+					skillw.setBounds(200,200,200,300);
 					break;
 				}
 				case 4:
