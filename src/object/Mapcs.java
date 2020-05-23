@@ -277,7 +277,7 @@ public class Mapcs extends JPanel
 		case 0:
 		{
 			if(renx>100&&renx<160&&reny==790)
-				return new MapSwitch(6,95,1200); //1,1940,200
+				return new MapSwitch(1,1940,200); 
 		}
 		case 1:
 		{
@@ -293,7 +293,7 @@ public class Mapcs extends JPanel
 			if(renx>2395&&renx<2455&&reny==365)
 				return new MapSwitch(1,60,220);
 			if(renx>145&&renx<225&&reny==425)
-				return new MapSwitch(4,50,1250);
+				return new MapSwitch(6,95,1200);
 		}
 		case 3:
 		{
