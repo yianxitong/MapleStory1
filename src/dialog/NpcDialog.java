@@ -22,24 +22,24 @@ public class NpcDialog  extends JPanel
 		{
 		case 0:
 		{
-			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/女神/女神.png"),15,40,this);//这里放原画
-			g.drawString("欢迎来到圣地...", 165, 30);
+			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/girls/girlshow_00114.png"),15,40,this);//这里放原画
+			g.drawString("醒了？...", 165, 30);
 			break;
 		}
 		case 1:
 		{
-			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/贤者/.png"),50,40,this);//这个x，y坐标是相对小屏幕来讲的
+			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/girl_hold/girl_hold_0029.png"),50,40,this);//这个x，y坐标是相对小屏幕来讲的
 			switch(progress)
 			{
 			case 0:
 			{
-				g.drawString("恩？你是新来的骑士？欢迎来到圣地！", 165, 30);
-				g.drawString("现在圣地处在一种十分危机的状态。你的到来让我看到了希望！", 165, 45);
+				g.drawString("我知道你有很多困惑...", 165, 30);
+				g.drawString("从这里出去，你会找到你想要的答案...", 165, 45);
 				break;
 			}
 			case 1:
 			{
-				g.drawString("我将向你说明现在的情况。我需要整理一下思路。", 165, 30);
+				g.drawString("这个世界或许不是你想的那么简单...", 165, 30);
 				g.drawString("请先到处转转吧！(左边似乎有五个人，去打个招呼吧)", 165, 45);
 				break;
 			}
@@ -50,21 +50,21 @@ public class NpcDialog  extends JPanel
 			}
 			case 3:
 			{
-				g.drawString("你来了。我想你应该看到了，五位骑士团长的状态...", 165, 30);
-				g.drawString("是的，他们被黑魔法师用罪恶的手段控制了心灵！", 165, 45);
-				g.drawString("不仅是他们，整个圣地，除了你之外，只剩下我和女皇了...", 165, 60);
-				g.drawString("我没有武力，明知道在女皇身边活动的骑士们已经被控制...", 165, 75);
-				g.drawString("我更不敢抵抗，一旦揭穿了他们的伪装，女皇就危险了。", 165, 90);
-				g.drawString("你问黑魔法师为什么这样做？(请再次和我对话)", 165, 105);
+				g.drawString("你来了。我想你应该看到了，他们的状态...", 165, 30);
+				g.drawString("是的，他们根本不知道自己在助长什么！", 165, 45);
+				g.drawString("不仅是他们，整个世界，除了你，他们都不清楚真相...", 165, 60);
+				g.drawString("我只知道我要去救人...", 165, 75);
+				g.drawString("到底他们是为了什么，我一定要揭穿了他们的伪装，不然朵儿有危险。", 165, 90);
+				g.drawString("你问黑衣人为什么这样做？(请再次和我对话)", 165, 105);
 				break;
 			}
 			case 4:
 			{
-				g.drawString("黑魔法师并不想要取女皇性命。", 165, 30);
-				g.drawString("成熟的女皇拥有强大的力量，足以威胁到黑魔法师", 165, 45);
-				g.drawString("黑魔法师忌惮却又觊觎女皇的力量，所以控制了圣地", 165, 60);
-				g.drawString("让傀儡们潜伏在女皇身边...", 165, 75);
-				g.drawString("他在等待控制女皇的时机，而我推测，这个时机已经不远了", 165, 90);
+				g.drawString("他们想要取朵儿性命。", 165, 30);
+				g.drawString("这个世界需要救赎", 165, 45);
+				g.drawString("朵儿似乎有什么他们需要的力量，所以控制了这里", 165, 60);
+				g.drawString("他们组织潜伏在各个地方...", 165, 75);
+				g.drawString("他在等待控制力量的时机，而我推测，这个时机已经不远了", 165, 90);
 				g.drawString("我无法在明处与之对抗，实感惭愧，但是你...", 165, 105);
 				g.drawString("如果是你的话，或许可以...", 165, 120);
 				g.drawString("(请再和我对话)", 165, 135);
@@ -73,7 +73,7 @@ public class NpcDialog  extends JPanel
 			case 5:
 			{
 				g.drawString("实力是很重要的。先将等级提升到10级吧！", 165, 30);
-				g.drawString("往左走击杀被控制的士兵可以获取经验值。", 165, 45);
+				g.drawString("往左走击杀刺客可以获取经验值。", 165, 45);
 				break;
 			}
 			case 6:
@@ -89,9 +89,9 @@ public class NpcDialog  extends JPanel
 			}
 			case 8:
 			{
-				g.drawString("圣地中到处都是黑魔法师的傀儡", 165, 30);
-				g.drawString("这对女皇来说是很大的威胁", 165, 45);
-				g.drawString("不能杀掉太多，不然会引起黑魔法师注意的", 165, 60);
+				g.drawString("这里到处都是黑衣人的傀要塞", 165, 30);
+				g.drawString("你确定你可以触碰到真相吗", 165, 45);
+				g.drawString("你好像已经引起他们注意了...", 165, 60);
 				g.drawString("(请再和我对话)", 165, 75);
 				break;
 			}
@@ -115,8 +115,8 @@ public class NpcDialog  extends JPanel
 			}
 			case 12:
 			{
-				g.drawString("有一部分傀儡们再武器库中获得了精良的装备", 165, 30);
-				g.drawString("我们需要消弱傀儡们的实力", 165, 45);
+				g.drawString("对方组织武器库中获得了精良的装备", 165, 30);
+				g.drawString("我们需要消弱他们的实力", 165, 45);
 				g.drawString("(请再和我对话)", 165, 60);
 				break;
 			}
@@ -140,32 +140,32 @@ public class NpcDialog  extends JPanel
 			}
 			case 16:
 			{
-				g.drawString("圣地的情况终于渐渐好转了", 165, 30);
-				g.drawString("我们现在可以考虑如何向黑魔法师反击了", 165, 45);
+				g.drawString("情况似乎渐渐明了了", 165, 30);
+				g.drawString("我们现在可以考虑如何向头目发起反击了", 165, 45);
 				g.drawString("(请再和我对话)", 165, 60);
 				break;
 			}
 			case 17:
 			{
 				g.drawString("在没有足够实力之前不能轻举妄动", 165, 30);
-				g.drawString("向外界求取援军是个很不错的办法", 165, 45);
-				g.drawString("我不能离开女皇，所以这个任务就交给你了", 165, 60);
+				g.drawString("向外界探索答案是个很不错的办法", 165, 45);
+				g.drawString("我不能离开这里，所以这个任务就交给你了", 165, 60);
 				g.drawString("(请再和我对话)", 165, 75);
 				break;
 			}
 			case 18:
 			{
-				g.drawString("通过[前线2]左边的传送门向冒险岛世界求助吧！", 165, 30);
+				g.drawString("通过[前线2]左边的传送门去寻找答案吧...", 165, 30);
 				break;
 			}
 			case 19:
 			{
-				g.drawString("通过[前线2]左边的传送门向冒险岛世界求助吧！", 165, 30);
+				g.drawString("通过[前线2]左边的传送门去寻找答案吧...", 165, 30);
 				break;
 			}
 			case 20:
 			{
-				g.drawString("(将看到的景象告诉给南哈特)", 165, 30);
+				g.drawString("(将看到的景象告诉给老者)", 165, 30);
 				break;
 			}
 			case 21:
@@ -184,69 +184,69 @@ public class NpcDialog  extends JPanel
 			}
 			case 23:
 			{
-				g.drawString("传说中的！！！！！！", 165, 30);
-				g.drawString("真·24K高强度硫酸铜硬化畴壁共振防涡流损耗和共振损耗电子", 165, 45);
-				g.drawString("脉冲带放光二极管及光敏三极管之晶圆脉冲散射之光斑照射粒", 165, 60);
-				g.drawString("子带发光半导体及光电感应器之光源硬化及反电磁波加硫酸亚", 165, 75);
-				g.drawString("铁硬化以及硝酸铜硬化氪金防暴混凝土家族任务石巨人2009", 165, 90);
-				g.drawString("牛年限定特别加强版？！？！！！！！！！！！！！！！",165,105);
-				g.drawString("(作者无聊呗)", 165, 120);
+				g.drawString("袁方舟！！！！！！", 165, 30);
+				g.drawString("妻子...女儿...", 165, 45);
+				g.drawString("这个世界...救...", 165, 60);
+				g.drawString("又失败...为什么...为什么...", 165, 75);
+				g.drawString("这次一定！成功...要...救...所有人...", 165, 90);
+				g.drawString("或许....",165,105);
+				g.drawString("(事情好像并没有那么简单)", 165, 120);
 				g.drawString("(再次和我对话)", 165, 135);
 				break;
 			}
 			case 24:
 			{
-				g.drawString("我明白了！这一切都是黑魔法师的阴谋！", 165, 30);
+				g.drawString("我明白了！这一切都是袁方舟的阴谋！", 165, 30);
 				g.drawString("你所看到的是一种特殊的石巨人", 165, 45);
 				g.drawString("他们是很早以前被创造出来用作守护和防御的", 165, 60);
-				g.drawString("现在它们因黑魔法师的力量出现在了圣地边缘", 165, 75);
+				g.drawString("现在它们！", 165, 75);
 				g.drawString("我所想到的只有一个非常恐怖的阴谋！！", 165, 90);
-				g.drawString("只有黑魔法师才做的出的邪恶阴谋！！",165,105);
+				g.drawString("只有它们才做的出的邪恶阴谋！！",165,105);
 				g.drawString("(再次和我对话)", 165, 120);
 				break;
 			}
 			case 25:
 			{
-				g.drawString("黑魔法师觊觎女皇的力量", 165, 30);
+				g.drawString("它们觊觎朵儿的力量", 165, 30);
 				g.drawString("所以...他...不知道用了什么方法..", 165, 45);
-				g.drawString("把整个圣地给包围了起来！", 165, 60);
-				g.drawString("这简直就是在...圈养女皇！！", 165, 75);
-				g.drawString("可恶！圣地遭受到如此耻辱，为什么大路上没有增援的动静?!", 165, 90);
-				g.drawString("难道...大家都已经自生难保了吗...",165,105);
+				g.drawString("把整个世界给包围了起来！", 165, 60);
+				g.drawString("这简直就是在...送死！", 165, 75);
+				g.drawString("可恶！朵儿遭受到如此耻辱，为什么大路上没有增援的动静?!", 165, 90);
+				g.drawString("难道...大家全都不知情吗...",165,105);
 				g.drawString("我们必须严肃的对待这件事情！", 165, 120);
 				g.drawString("(再次和我对话)", 165, 135);
 				break;
 			}
 			case 26:
 			{
-				g.drawString("成熟的女皇或许就是这个世界最后的希望了", 165, 30);
-				g.drawString("不管发生什么事情，一定要救出女皇！", 165, 45);
-				g.drawString("把整个圣地给包围了起来！", 165, 60);
-				g.drawString("这简直就是在...圈养女皇！！", 165, 75);
-				g.drawString("可恶！圣地遭受到如此耻辱，为什么大路上没有增援的动静?!", 165, 90);
-				g.drawString("难道...大家都已经自生难保了吗...",165,105);
-				g.drawString("一定...要带女皇离开这里！", 165, 120);
+				g.drawString("你或许就是这个世界最后的希望了", 165, 30);
+				g.drawString("不管发生什么事情，一定要相信自己的选择！", 165, 45);
+				g.drawString("这个世界岌岌可危...", 165, 60);
+				g.drawString("这简直就是在...送死！！", 165, 75);
+				g.drawString("可恶！为什么没有人反击？", 165, 90);
+				g.drawString("难道...大家都不明真相吗...",165,105);
+				g.drawString("(一定...要带朵儿离开这里！)", 165, 120);
 				g.drawString("(再次和我对话)", 165, 135);
 				break;
 			}
 			case 27:
 			{
-				g.drawString("以我和女皇的实力，是无法突破石巨人阵的", 165, 30);
+				g.drawString("以我的实力，是无法突破石巨人阵的", 165, 30);
 				g.drawString("但是勇士，你却可以！", 165, 45);
 				g.drawString("但凡石巨人出现的地方，附件一定有为其提供能量的物体！", 165, 60);
 				g.drawString("虽然艰难，但是请你务必突破石巨人守护阵", 165, 75);
 				g.drawString("进入[上山路1]最上方的传送门继续调查", 165, 90);
-				g.drawString("你一定可以的！加油！为了女皇！",165,105);
+				g.drawString("你一定可以的！加油！为了这个世界！",165,105);
 				break;
 			}
 			case 28:
 			{
-				g.drawString("快去调查吧！为了女皇！", 165, 30);
+				g.drawString("快去调查吧！为了朵儿！", 165, 30);
 				break;
 			}
 			case 29:
 			{
-				g.drawString("(将看到的情景告诉南哈特)", 165, 30);
+				g.drawString("(将看到的情景告诉老者)", 165, 30);
 				break;
 			}
 			case 30:
@@ -284,32 +284,32 @@ public class NpcDialog  extends JPanel
 		}
 		case 2:
 		{
-			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/骑士/骑士1.png"),15,40,this);
-			g.drawString("恩？新人！呵呵，离女皇远一点！", 165, 30);
+			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/黑化的五骑士/奥兹.png"),15,40,this);
+			g.drawString("有些事情不知道对你有好处...", 165, 30);
 			break;
 		}
 		case 3:
 		{
-			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/骑士/骑士2.png"),15,40,this);
-			g.drawString("恩？新人！呵呵，离女皇远一点！", 165, 30);
+			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/黑化的五骑士/胡克.png"),15,40,this);
+			g.drawString("他们对这个世界有着重要的意义！", 165, 30);
 			break;
 		}
 		case 4:
 		{
-			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/骑士/骑士3.png"),15,40,this);
-			g.drawString("恩？新人！呵呵，离女皇远一点！", 165, 30);
+			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/黑化的五骑士/米哈尔.png"),15,40,this);
+			g.drawString("你确定你是正义的一方吗...", 165, 30);
 			break;
 		}
 		case 5:
 		{
-			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/骑士/骑士4.png"),15,40,this);
-			g.drawString("恩？新人！呵呵，离女皇远一点！", 165, 30);
+			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/黑化的五骑士/伊卡尔特.png"),15,40,this);
+			g.drawString("你确定吗...", 165, 30);
 			break;
 		}
 		case 6:
 		{
-			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/骑士/骑士5.png"),15,40,this);
-			g.drawString("恩？新人！呵呵，离女皇远一点！", 165, 30);
+			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/黑化的五骑士/伊莉娜.png"),15,40,this);
+			g.drawString("我们没有其他的选择了...没有比这更好的选择了...", 165, 30);
 			break;
 		}
 		case 7:
@@ -337,17 +337,17 @@ public class NpcDialog  extends JPanel
 		}
 		case 8:
 		{
-			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/主角/对话.png"),15,40,this);
+			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/主角/死亡/dead_0038.png"),15,40,this);
 			switch(progress)
 			{
 			case 37:
 			{
-				g.drawString("曾经纵横世界的剑圣麦吉！竟然也被黑魔法师侵蚀了心灵！。", 165, 30);
+				g.drawString("你不能理解我，为什么，不，不，不，你应该理解我的，你知道的我不是为了自己，我是在救这个世界...", 165, 30);
 				break;
 			}
 			case 38:
 			{
-				g.drawString("(为了这个世界，我必须击败他，可是真的能赢吗...)", 165, 30);
+				g.drawString("(我或许，我到底应该击败他吗...可是真的能赢吗...)", 165, 30);
 				break;
 			}
 			}
