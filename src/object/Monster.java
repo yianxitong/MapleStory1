@@ -198,8 +198,8 @@ public class Monster extends JPanel
 		{
 			switch(zhuangtai)
 			{
-			case 0:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/²»¶¯/enemy2_hold_00050.png"),x-Offsetx-41,y+Offsety-120,this);break;
-			case 1:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/²»¶¯/enemy2_hold_00051.png"),x-Offsetx-58,y+Offsety-120,this);break;
+			case 0:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/²»¶¯/ÅÖ×ó.png"),x-Offsetx-41,y+Offsety-120,this);break;
+			case 1:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/²»¶¯/ÅÖÓÒ.png"),x-Offsetx-58,y+Offsety-120,this);break;
 			case 2:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/×ß/×ó×ß2.gif"),x-Offsetx-43,y+Offsety-120,this);break;
 			case 3:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/×ß/ÓÒ×ß2.gif"),x-Offsetx-68,y+Offsety-120,this);break;
 			case 4:g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/Í·Ìú¹Ö/°¤×á/ÅÖ×ó.png"),x-Offsetx-43,y+Offsety-120,this);break;
