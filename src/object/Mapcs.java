@@ -274,12 +274,12 @@ public class Mapcs extends JPanel
 	{
 		switch(mapNo)
 		{
-		case 0:
+		case 0: //女皇之路
 		{
 			if(renx>100&&renx<160&&reny==790)
-				return new MapSwitch(3,1155,250); //1,1940,200
+				return new MapSwitch(1,1940,200); //1,1940,200
 		}
-		case 1:
+		case 1: //树林
 		{
 			if(renx>1905&&renx<1965&&reny==400)
 				return new MapSwitch(0,130,740);
@@ -288,28 +288,28 @@ public class Mapcs extends JPanel
 			if(renx>825&&renx<885&&reny==340)
 				return new MapSwitch(3,1155,250);
 		}
-		case 2:
+		case 2: //边塞
 		{
 			if(renx>2395&&renx<2455&&reny==365)
 				return new MapSwitch(1,60,220);
 			if(renx>145&&renx<225&&reny==425)
 				return new MapSwitch(6,95,1200);
 		}
-		case 3:
+		case 3: //要塞
 		{
 			if(renx>1130&&renx<1190&&reny==300)
 				return new MapSwitch(1,855,200);
 			if(renx>720&&renx<790&&reny==1020)
 				return new MapSwitch(6,95,1200);
 		}
-		case 4:
+		case 4: //上山路1
 		{
 			if(renx>20&&renx<75&&reny==1310)
 				return new MapSwitch(2,185,200);
 			if(renx>1385&&renx<1435&&reny==290)
 				return new MapSwitch(5,115,1440);
 		}
-		case 5:
+		case 5: //上山路2
 		{
 			if(renx>90&&renx<=140&&reny==1570)
 				return new MapSwitch(4,1410,240);
@@ -351,7 +351,8 @@ public class Mapcs extends JPanel
 		}
 		case 3:
 		{
-			if(renx>1130&&renx<1190&&reny==300)
+			if((renx>1130&&renx<1190&&reny==300)
+				||(renx>720&&renx<790&&reny==1020))
 				return 1;
 			break;
 		}
@@ -413,7 +414,7 @@ public class Mapcs extends JPanel
 		}
 		case 6:
 		{
-			if((renx>=490&&renx<=500&&reny>=1015&&reny<1280)
+			if((renx>=490&&renx<=500&&reny>=1035&&reny<=1290) //265
 					||(renx>=145&&renx<=155&&reny>=650&&reny<860)
 					||(renx>=1290&&renx<=1300&&reny>=930&&reny<1270))
 				return 1;
