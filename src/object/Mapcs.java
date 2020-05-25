@@ -435,23 +435,23 @@ public class Mapcs extends JPanel
 		}
 		case 1:
 		{
-			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/地图/前线1/前线1.png"),x,y,this);
+			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/地图/树林/树林.png"),x,y,this);
 			g.drawString("地图位置："+"x="+Integer.toString(renx)+"y="+Integer.toString(reny),645,540);
-			g.drawString("前线1",0,10);
+			g.drawString("树林",0,10);
 			break;
 		}
 		case 2:
 		{
-			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/地图/前线2/前线2.png"),x,y,this);
+			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/地图/边塞/边塞.png"),x,y,this);
 			g.drawString("地图位置："+"x="+Integer.toString(renx)+"y="+Integer.toString(reny),645,540);
-			g.drawString("前线2",0,10);
+			g.drawString("边塞",0,10);
 			break;
 		}
 		case 3:
 		{
-			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/地图/武器库/武器库.png"),x,y,this);
+			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/地图/要塞/要塞.png"),x,y,this);
 			g.drawString("地图位置："+"x="+Integer.toString(renx)+"y="+Integer.toString(reny),645,540);
-			g.drawString("武器库",0,10);
+			g.drawString("要塞",0,10);
 			break;
 		}
 		case 4:
