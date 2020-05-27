@@ -128,6 +128,7 @@ public class MainWindow extends JFrame
 	private Thread atMap6=new Thread(new TestRunnable(10));
 	private Thread movesee=new Thread(new TestRunnable(11));
 	private Thread Bgm=new Thread(new TestRunnable(13));
+	private Thread skill1=new Thread(new TestRunnable(14));
 	
 	public MainWindow()//¹¹Ôì´°¿Ú
 	{	
@@ -1086,6 +1087,55 @@ public class MainWindow extends JFrame
 					}
 				}
 			}
+			case 14:
+			{
+				if(attacking==0)
+				{
+					attacking=1;
+				for(int attacktime=0;attacktime<30;attacktime++)
+				{
+					
+					ren.setzhuangtai(Direction==0?attacktime+34:attacktime+34);
+					//MainWindow.this.repaint();
+					try
+					{
+						Thread.sleep(100);
+					}
+					catch(Exception e1)
+					{
+						e1.printStackTrace();
+					}
+					MainWindow.this.repaint();
+				}
+				attacking=0;
+				ren.setzhuangtai(Direction==0?9:8);
+				}
+				break;
+			}
+		/*	case 14:
+			{
+				if(attacking==0)
+				{
+					attacking=1;
+
+					
+					ren.setzhuangtai(Direction==0?34:35);
+					//MainWindow.this.repaint();
+					try
+					{
+						Thread.sleep(100);
+					}
+					catch(Exception e1)
+					{
+						e1.printStackTrace();
+					}
+					MainWindow.this.repaint();
+				
+				attacking=0;
+				ren.setzhuangtai(Direction==0?9:8);
+				}
+				break;
+			}*/
 		}	
 		}
 	}
@@ -1618,6 +1668,13 @@ public class MainWindow extends JFrame
 				if(Drop!=2)
 				{
 				new Thread(Attack).start();
+				}
+			}
+			if(e.getKeyCode()==KeyEvent.VK_U)
+			{
+				if(Drop!=2)
+				{
+				new Thread(skill1).start();
 				}
 			}
 			if(e.getKeyCode()==KeyEvent.VK_K)
