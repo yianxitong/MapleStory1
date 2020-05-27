@@ -86,7 +86,7 @@ public class MainWindow extends JFrame
 	private StatusBar statusbar=new StatusBar();//状态条
 	private SystemButton sysb=new SystemButton();//系统按钮
 	private Menu menu=new Menu();//菜单
-	private ButtonBase []menubutton=//菜单按钮
+	private ButtonBase[] menubutton=//菜单按钮
 		{
 			new EquipmentButton(),new BackpackButton(),
 			new SkillButton(),new AbilityButton(),
@@ -128,7 +128,9 @@ public class MainWindow extends JFrame
 	private Thread atMap6=new Thread(new TestRunnable(10));
 	private Thread movesee=new Thread(new TestRunnable(11));
 	private Thread Bgm=new Thread(new TestRunnable(13));
-	
+	private Thread skill1=new Thread(new TestRunnable(14));
+	private Thread skill2=new Thread(new TestRunnable(15));
+	private Thread skill3=new Thread(new TestRunnable(15));
 	public MainWindow()//构造窗口
 	{	
 		/**添加组件
@@ -1086,6 +1088,79 @@ public class MainWindow extends JFrame
 					}
 				}
 			}
+			case 14:
+			{
+				if(attacking==0)
+				{
+					attacking=1;
+				for(int attacktime=0;attacktime<30;attacktime++)
+				{
+					
+					ren.setzhuangtai(Direction==0?attacktime+34:attacktime+34);
+					//MainWindow.this.repaint();
+					try
+					{
+						Thread.sleep(100);
+					}
+					catch(Exception e1)
+					{
+						e1.printStackTrace();
+					}
+					MainWindow.this.repaint();
+				}
+				attacking=0;
+				ren.setzhuangtai(Direction==0?9:8);
+				}
+				break;
+			}
+			case 15:
+			{
+				if(attacking==0)
+				{
+					attacking=1;
+				for(int attacktime=0;attacktime<14;attacktime++)
+				{
+					
+					ren.setzhuangtai(Direction==0?attacktime+65:attacktime+65);
+					//MainWindow.this.repaint();
+					try
+					{
+						Thread.sleep(100);
+					}
+					catch(Exception e1)
+					{
+						e1.printStackTrace();
+					}
+					MainWindow.this.repaint();
+				}
+				attacking=0;
+				ren.setzhuangtai(Direction==0?9:8);
+				}
+				break;
+			}
+			case 16:
+			{
+				if(attacking==0)
+				{
+					attacking=1;
+					ren.setzhuangtai(Direction==0?91:91);
+					//MainWindow.this.repaint();
+					try
+					{
+						Thread.sleep(100);
+					}
+					catch(Exception e1)
+					{
+						e1.printStackTrace();
+					}
+					MainWindow.this.repaint();
+				
+				attacking=0;
+				ren.setzhuangtai(Direction==0?9:8);
+				}
+				break;
+			}
+			
 		}	
 		}
 	}
@@ -1618,6 +1693,27 @@ public class MainWindow extends JFrame
 				if(Drop!=2)
 				{
 				new Thread(Attack).start();
+				}
+			}
+			if(e.getKeyCode()==KeyEvent.VK_U)
+			{
+				if(Drop!=2)
+				{
+				new Thread(skill1).start();
+				}
+			}
+			if(e.getKeyCode()==KeyEvent.VK_I)
+			{
+				if(Drop!=2)
+				{
+				new Thread(skill2).start();
+				}
+			}
+			if(e.getKeyCode()==KeyEvent.VK_O)
+			{
+				if(Drop!=2)
+				{
+				new Thread(skill3).start();
 				}
 			}
 			if(e.getKeyCode()==KeyEvent.VK_K)
