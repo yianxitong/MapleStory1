@@ -1096,8 +1096,8 @@ public class MainWindow extends JFrame
 				for(int attacktime=0;attacktime<7;attacktime++)
 				{
 					
-					ren.setzhuangtai(Direction==0?attacktime+34:attacktime+41);
-					//MainWindow.this.repaint();
+					ren.setzhuangtai(Direction==0?attacktime+41:attacktime+34);
+
 					try
 					{
 						Thread.sleep(100);
@@ -1118,11 +1118,11 @@ public class MainWindow extends JFrame
 				if(attacking==0)
 				{
 					attacking=1;
-				for(int attacktime=0;attacktime<6;attacktime++)
+				for(int attacktime=0;attacktime<13;attacktime++)
 				{
 					
-					ren.setzhuangtai(Direction==0?attacktime+65:attacktime+65);
-					//MainWindow.this.repaint();
+					ren.setzhuangtai(Direction==0?attacktime+78:attacktime+65);
+
 					try
 					{
 						Thread.sleep(100);
@@ -1143,11 +1143,11 @@ public class MainWindow extends JFrame
 				if(attacking==0)
 				{
 					attacking=1;
-				for(int attacktime=0;attacktime<5;attacktime++)
+				for(int attacktime=0;attacktime<9;attacktime++)
 				{
 					
-					ren.setzhuangtai(Direction==0?attacktime+80:attacktime+80);
-					//MainWindow.this.repaint();
+					ren.setzhuangtai(Direction==0?attacktime+100:attacktime+91);
+	
 					try
 					{
 						Thread.sleep(100);
@@ -1163,30 +1163,6 @@ public class MainWindow extends JFrame
 				}
 				break;
 			}
-		/*	case 14:
-			{
-				if(attacking==0)
-				{
-					attacking=1;
-
-					
-					ren.setzhuangtai(Direction==0?34:35);
-					//MainWindow.this.repaint();
-					try
-					{
-						Thread.sleep(100);
-					}
-					catch(Exception e1)
-					{
-						e1.printStackTrace();
-					}
-					MainWindow.this.repaint();
-				
-				attacking=0;
-				ren.setzhuangtai(Direction==0?9:8);
-				}
-				break;
-			}*/
 		}	
 		}
 	}
