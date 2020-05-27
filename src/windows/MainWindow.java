@@ -69,7 +69,6 @@ public class MainWindow extends JFrame
 	private int dmg;
 	
 	private Obj ren=new Obj(0,0);//创建角色
-	private KeyboardWindow keyboard=new KeyboardWindow();//键盘框
 	private TaskWindow taskw=new TaskWindow();
 	private NpcDialog dialog=new NpcDialog();//对话框
 	private DialogNextButton nextb=new DialogNextButton();//确认按钮
@@ -129,6 +128,8 @@ public class MainWindow extends JFrame
 	private Thread movesee=new Thread(new TestRunnable(11));
 	private Thread Bgm=new Thread(new TestRunnable(13));
 	private Thread skill1=new Thread(new TestRunnable(14));
+	private Thread skill2=new Thread(new TestRunnable(15));
+	private Thread skill3=new Thread(new TestRunnable(16));
 	
 	public MainWindow()//构造窗口
 	{	
@@ -1092,10 +1093,60 @@ public class MainWindow extends JFrame
 				if(attacking==0)
 				{
 					attacking=1;
-				for(int attacktime=0;attacktime<30;attacktime++)
+				for(int attacktime=0;attacktime<7;attacktime++)
 				{
 					
-					ren.setzhuangtai(Direction==0?attacktime+34:attacktime+34);
+					ren.setzhuangtai(Direction==0?attacktime+34:attacktime+41);
+					//MainWindow.this.repaint();
+					try
+					{
+						Thread.sleep(100);
+					}
+					catch(Exception e1)
+					{
+						e1.printStackTrace();
+					}
+					MainWindow.this.repaint();
+				}
+				attacking=0;
+				ren.setzhuangtai(Direction==0?9:8);
+				}
+				break;
+			}
+			case 15:
+			{
+				if(attacking==0)
+				{
+					attacking=1;
+				for(int attacktime=0;attacktime<6;attacktime++)
+				{
+					
+					ren.setzhuangtai(Direction==0?attacktime+65:attacktime+65);
+					//MainWindow.this.repaint();
+					try
+					{
+						Thread.sleep(100);
+					}
+					catch(Exception e1)
+					{
+						e1.printStackTrace();
+					}
+					MainWindow.this.repaint();
+				}
+				attacking=0;
+				ren.setzhuangtai(Direction==0?9:8);
+				}
+				break;
+			}
+			case 16:
+			{
+				if(attacking==0)
+				{
+					attacking=1;
+				for(int attacktime=0;attacktime<5;attacktime++)
+				{
+					
+					ren.setzhuangtai(Direction==0?attacktime+80:attacktime+80);
 					//MainWindow.this.repaint();
 					try
 					{
@@ -1697,6 +1748,20 @@ public class MainWindow extends JFrame
 				if(Drop!=2)
 				{
 				new Thread(skill1).start();
+				}
+			}
+			if(e.getKeyCode()==KeyEvent.VK_I)
+			{
+				if(Drop!=2)
+				{
+				new Thread(skill2).start();
+				}
+			}
+			if(e.getKeyCode()==KeyEvent.VK_O)
+			{
+				if(Drop!=2)
+				{
+				new Thread(skill3).start();
 				}
 			}
 			if(e.getKeyCode()==KeyEvent.VK_K)
