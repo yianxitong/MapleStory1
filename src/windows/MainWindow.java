@@ -1187,6 +1187,28 @@ public class MainWindow extends JFrame
 				}
 				break;
 			}*/
+//			if(attacking==0)
+//			{
+//				attacking=1;
+//			for(int attacktime=0;attacktime<9;attacktime++)
+//			{
+//				
+//				ren.setzhuangtai(Direction==0?attacktime+14:attacktime+23);
+//				//MainWindow.this.repaint();
+//				try
+//				{
+//					Thread.sleep(100);
+//				}
+//				catch(Exception e1)
+//				{
+//					e1.printStackTrace();
+//				}
+//				MainWindow.this.repaint();
+//			}
+//			attacking=0;
+//			ren.setzhuangtai(Direction==0?9:8);
+//			}
+//			break;
 		}	
 		}
 	}
