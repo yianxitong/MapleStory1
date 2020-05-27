@@ -314,7 +314,7 @@ public class NpcDialog  extends JPanel
 		}
 		case 7:
 		{
-			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/高手/站.png"),15,40,this);
+			g.drawImage(Toolkit.getDefaultToolkit().getImage("./图片素材/怪物/刻印石头人/被攻击/左.png"),15,40,this);
 			switch(progress)
 			{
 			case 35:
