@@ -69,7 +69,6 @@ public class MainWindow extends JFrame
 	private int dmg;
 	
 	private Obj ren=new Obj(0,0);//创建角色
-	private KeyboardWindow keyboard=new KeyboardWindow();//键盘框
 	private TaskWindow taskw=new TaskWindow();
 	private NpcDialog dialog=new NpcDialog();//对话框
 	private DialogNextButton nextb=new DialogNextButton();//确认按钮
