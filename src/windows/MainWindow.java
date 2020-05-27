@@ -58,6 +58,7 @@ public class MainWindow extends JFrame
 	private int mapymax;//地图纵坐标最大值
 	private int mapxmax;//地图横坐标最大值
 	private int progress=0;//游戏进度
+	private boolean isSoundPlay=true;
 
 	/********/
 	private int NpcOffsetx=0;//NPCx轴偏移
@@ -1081,10 +1082,15 @@ public class MainWindow extends JFrame
 				Clock c = new Clock();
 				long s =  c.getElapsedTime().asMilliseconds();
 				while(true) {
-					if(c.getElapsedTime().asMilliseconds()==(s+15000)) {
-						c.restart();
-						s=c.getElapsedTime().asMilliseconds();
-						sound.play();
+					if(isSoundPlay) {
+						if(c.getElapsedTime().asMilliseconds()==(s+15000)) {
+							c.restart();
+							s=c.getElapsedTime().asMilliseconds();
+							sound.play();
+						}			
+					}
+					else {
+						sound.pause();
 					}
 				}
 			}
