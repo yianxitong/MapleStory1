@@ -23,7 +23,7 @@ public class NPC extends JPanel
 		}
 		case 1:
 		{
-			g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/ÏÍÕß/Õ¾/Õ¾.png"),-40,-50,273,180,this);
+			g.drawImage(Toolkit.getDefaultToolkit().getImage("./Í¼Æ¬ËØ²Ä/girl_hold/girl_hold_0029.png"),-40,-50,273,180,this);
 			break;
 		}
 		case 2:
