@@ -51,6 +51,7 @@ public class MainWindow extends JFrame
 	private int attacking=0;
 	private int battacking=0;
 	private int badirection=0;
+	private boolean isSoundPlay=true;
 	/**当前使用地图编号
 	 * 0=女皇之路
 	 * */
@@ -86,7 +87,7 @@ public class MainWindow extends JFrame
 	private StatusBar statusbar=new StatusBar();//状态条
 	private SystemButton sysb=new SystemButton();//系统按钮
 	private Menu menu=new Menu();//菜单
-	private ButtonBase[] menubutton=//菜单按钮
+	private ButtonBase []menubutton=//菜单按钮
 		{
 			new EquipmentButton(),new BackpackButton(),
 			new SkillButton(),new AbilityButton(),
@@ -121,16 +122,10 @@ public class MainWindow extends JFrame
 	private Thread newMonster=new Thread(new TestRunnable(3));
 	private Thread Newgw=new Thread(new TestRunnable(4));
 	private Thread atLV10=new Thread(new TestRunnable(5));
-	private Thread atMap4=new Thread(new TestRunnable(6));
+	private Thread bgm=new Thread(new TestRunnable(6));
 	private Thread Battack=new Thread(new TestRunnable(7));
 	private Thread MJump=new Thread(new TestRunnable(8));
-	private Thread atMap5=new Thread(new TestRunnable(9));
-	private Thread atMap6=new Thread(new TestRunnable(10));
-	private Thread movesee=new Thread(new TestRunnable(11));
-	private Thread Bgm=new Thread(new TestRunnable(13));
-	private Thread skill1=new Thread(new TestRunnable(14));
-	private Thread skill2=new Thread(new TestRunnable(15));
-	private Thread skill3=new Thread(new TestRunnable(15));
+	
 	public MainWindow()//构造窗口
 	{	
 		/**添加组件
@@ -197,9 +192,9 @@ public class MainWindow extends JFrame
 		this.setResizable(false);//固定窗口大小
 		this.setVisible(true);//显示窗口
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);//确保可以正确退出程序
-		new Thread(Bgm).start();
 		
 		gomap(1500,450);//女皇之路 1500,300
+		new Thread(bgm).start();
 	}
 	public void gomap(int x,int y)//进入地图 切换地图时，要给地图一个初始位置
 	{
@@ -345,85 +340,6 @@ public class MainWindow extends JFrame
 			break;
 		}
 		}
-	}
-	public void movesee(int m)
-	{
-		System.out.printf("地图移动启动\n");
-			ren.setVisible(false);
-			int i=m;
-			//向上
-			while(i-->0)
-			{
-				try
-				{
-					Thread.sleep(3);
-				}
-				catch(Exception e1)
-				{
-					e1.printStackTrace();
-				}
-				/*if(ren.gety()>=100||map.getreny()<=100)
-					ren.movey(-1);
-				else 
-				{*/
-					map.movey(1);
-					NpcOffsety+=1;
-				//}
-				//map.movereny(-1);
-				NPCshow();
-				MainWindow.this.repaint();
-			}
-			try
-			{
-				Thread.sleep(3000);
-			}
-			catch(Exception e1)
-			{
-				e1.printStackTrace();
-			}
-			//向下
-			while(i++<m)
-			{
-				try
-				{
-					Thread.sleep(3);
-				}
-				catch(Exception e1)
-				{
-					e1.printStackTrace();
-				}
-				/*if(ren.gety()>=100||map.getreny()<=100)
-					ren.movey(-1);
-				else 
-				{*/
-					map.movey(-1);
-					NpcOffsety-=1;
-				//}
-				//map.movereny(-1);
-				NPCshow();
-				MainWindow.this.repaint();
-			}
-			ren.setVisible(true);
-			if(progress==35)
-			{
-				dialog.setDialog(7,progress);
-				dialog.setBounds(145+0, 120+0, 515, 180);
-				nextb.setBounds(475+145, 160+120, 37, 20);
-				endb.setBounds(5+145, 160+120, 90, 20);
-				dialog.setVisible(true);
-				endb.setVisible(false);
-				nextb.setVisible(true);
-			}
-			if(progress==39)
-			{
-				dialog.setDialog(7,progress);
-				dialog.setBounds(145+0, 120+0, 515, 180);
-				nextb.setBounds(475+145, 160+120, 37, 20);
-				endb.setBounds(5+145, 160+120, 90, 20);
-				dialog.setVisible(true);
-				endb.setVisible(false);
-				nextb.setVisible(true);
-			}
 	}
 	
 	public class TestRunnable  implements Runnable//线程内部类
@@ -846,20 +762,35 @@ public class MainWindow extends JFrame
 			}
 			case 6:
 			{
-				while(mapNo!=4)
-				{
-					try
-					{
-						Thread.sleep(500);
-					}
-					catch(Exception e1)
-					{
-						e1.printStackTrace();
-					}
+				Time ZERO = null;
+				Time d = ZERO.getSeconds(14);
+				SoundBuffer bgm = new SoundBuffer();
+				try {
+				    bgm.loadFromFile(Paths.get("音乐素材","2.wav"));
+//				    d = bgm.getDuration();
+//				    System.out.print(d);
+				} catch(IOException ex) {
+				    ex.printStackTrace();
 				}
-				if(progress==19)
-					{progress=20;movesee(800);}
-					break;
+				//Create a sound and set its buffer
+				Sound sound = new Sound();
+				sound.setBuffer(bgm);
+				sound.play();
+				Clock c = new Clock();
+				long s =  c.getElapsedTime().asMilliseconds();
+				while(true) {
+					if(isSoundPlay==true) {
+						if(c.getElapsedTime().asMilliseconds()==(s+15000)) {
+							c.restart();
+							s=c.getElapsedTime().asMilliseconds();
+							sound.play();
+						}
+					}
+					else {
+						sound.pause();
+					}
+					
+				}
 			}
 			case 7:
 			{
@@ -1017,150 +948,6 @@ public class MainWindow extends JFrame
 				}
 				break;
 			}
-			case 9:
-			{
-				while(mapNo!=5)
-				{
-					try
-					{
-						Thread.sleep(500);
-					}
-					catch(Exception e1)
-					{
-						e1.printStackTrace();
-					}
-				}
-				if(progress==28)
-					{progress=29;movesee(800);}
-					break;
-			}
-			case 10:
-			{
-				while(mapNo!=6)
-				{
-					try
-					{
-						Thread.sleep(500);
-					}
-					catch(Exception e1)
-					{
-						e1.printStackTrace();
-					}
-				}
-				if(progress==34)
-					{progress=35;movesee(800);}
-					break;
-			}
-			case 11:
-			{		
-				movesee(800);
-				break;
-			}
-			case 12:
-			{
-				//麦吉
-				
-			}
-			
-			case 13:
-			{
-				Time ZERO = null;
-				Time d = ZERO.getSeconds(14);
-				SoundBuffer bgm = new SoundBuffer();
-				try {
-				    bgm.loadFromFile(Paths.get("音乐素材","2.wav"));
-//				    d = bgm.getDuration();
-//				    System.out.print(d);
-				} catch(IOException ex) {
-				    ex.printStackTrace();
-				}
-				//Create a sound and set its buffer
-				Sound sound = new Sound();
-				sound.setBuffer(bgm);
-				sound.play();
-				Clock c = new Clock();
-				long s =  c.getElapsedTime().asMilliseconds();
-				while(true) {
-					if(c.getElapsedTime().asMilliseconds()==(s+15000)) {
-						c.restart();
-						s=c.getElapsedTime().asMilliseconds();
-						sound.play();
-					}
-				}
-			}
-			case 14:
-			{
-				if(attacking==0)
-				{
-					attacking=1;
-				for(int attacktime=0;attacktime<30;attacktime++)
-				{
-					
-					ren.setzhuangtai(Direction==0?attacktime+34:attacktime+34);
-					//MainWindow.this.repaint();
-					try
-					{
-						Thread.sleep(100);
-					}
-					catch(Exception e1)
-					{
-						e1.printStackTrace();
-					}
-					MainWindow.this.repaint();
-				}
-				attacking=0;
-				ren.setzhuangtai(Direction==0?9:8);
-				}
-				break;
-			}
-			case 15:
-			{
-				if(attacking==0)
-				{
-					attacking=1;
-				for(int attacktime=0;attacktime<14;attacktime++)
-				{
-					
-					ren.setzhuangtai(Direction==0?attacktime+65:attacktime+65);
-					//MainWindow.this.repaint();
-					try
-					{
-						Thread.sleep(100);
-					}
-					catch(Exception e1)
-					{
-						e1.printStackTrace();
-					}
-					MainWindow.this.repaint();
-				}
-				attacking=0;
-				ren.setzhuangtai(Direction==0?9:8);
-				}
-				break;
-			}
-			case 16:
-			{
-				if(attacking==0)
-				{
-					attacking=1;
-					ren.setzhuangtai(Direction==0?91:91);
-					//MainWindow.this.repaint();
-					try
-					{
-						Thread.sleep(100);
-					}
-					catch(Exception e1)
-					{
-						e1.printStackTrace();
-					}
-					MainWindow.this.repaint();
-				
-				attacking=0;
-				ren.setzhuangtai(Direction==0?9:8);
-				}
-				break;
-			}
-			
 		}	
 		}
 	}
@@ -1372,7 +1159,7 @@ public class MainWindow extends JFrame
 					if(progress==17) statusbar.addexp(999999);
 					if(progress==18) statusbar.addexp(999999);
 					if(progress==19) 
-						new Thread(atMap4).start();
+						;
 					if(progress==21) statusbar.addexp(999999);
 					if(progress==22) statusbar.addexp(999999);
 					if(progress==23) statusbar.addexp(999999);
@@ -1380,9 +1167,9 @@ public class MainWindow extends JFrame
 					if(progress==25) statusbar.addexp(999999);
 					if(progress==26) statusbar.addexp(999999);
 					if(progress==28)
-						new Thread(atMap5).start();
+						;
 					if(progress==34)
-						new Thread(atMap6).start();
+						;
 					if(progress==36)
 					{
 						dialog.setDialog(7,progress);
@@ -1415,11 +1202,11 @@ public class MainWindow extends JFrame
 					}
 					if(progress==39)
 					{
-						new Thread(movesee).start();
+						;
 					}
 					if(progress==40)
 					{
-						System.out.printf("chengg\n");
+						System.out.printf("success\n");
 					}
 						
 						
@@ -1693,27 +1480,6 @@ public class MainWindow extends JFrame
 				if(Drop!=2)
 				{
 				new Thread(Attack).start();
-				}
-			}
-			if(e.getKeyCode()==KeyEvent.VK_U)
-			{
-				if(Drop!=2)
-				{
-				new Thread(skill1).start();
-				}
-			}
-			if(e.getKeyCode()==KeyEvent.VK_I)
-			{
-				if(Drop!=2)
-				{
-				new Thread(skill2).start();
-				}
-			}
-			if(e.getKeyCode()==KeyEvent.VK_O)
-			{
-				if(Drop!=2)
-				{
-				new Thread(skill3).start();
 				}
 			}
 			if(e.getKeyCode()==KeyEvent.VK_K)
