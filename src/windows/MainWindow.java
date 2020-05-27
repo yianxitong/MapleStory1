@@ -77,6 +77,7 @@ public class MainWindow extends JFrame
 	private SkillWindow skillw=new SkillWindow();//技能框
 	private EquipmentWindow equw=new EquipmentWindow();//装备栏
 //	private BackpackWindow backpackw=new BackpackWindow();//背包
+	private SetWindow set=new SetWindow();//设置按钮
 	
 	private Mapcs map=new Mapcs();//地图
 	private NPC []npc=//所有NPC
@@ -86,6 +87,9 @@ public class MainWindow extends JFrame
 	private StatusBar statusbar=new StatusBar();//状态条
 	private SystemButton sysb=new SystemButton();//系统按钮
 	private Menu menu=new Menu();//菜单
+	
+	private SoundButton soundb=new SoundButton();//声音按钮
+	
 	private ButtonBase []menubutton=//菜单按钮
 		{
 			new EquipmentButton(),new BackpackButton(),
@@ -149,6 +153,9 @@ public class MainWindow extends JFrame
 		add(skillw);//技能栏
 		add(equw);//装备栏
 //		add(backpackw);//背包
+		add(soundb);
+		add(set);
+		
 		
 		for(NPC temp:npc)//NPC
 			add(temp);
@@ -182,6 +189,9 @@ public class MainWindow extends JFrame
 		endb.addMouseListener(new mouselisten(0,9));
 		taskw.addMouseListener(new mouselisten(4,0));
 		taskw.addMouseMotionListener(new mouselisten(4,0));
+		soundb.addMouseListener(new mouselisten(1,0));
+
+		
 		dialog.setVisible(false);
 		endb.setVisible(false);
 		nextb.setVisible(false);
@@ -202,6 +212,12 @@ public class MainWindow extends JFrame
 		
 		gomap(1500,450);//女皇之路 1500,300
 	}
+	
+	public boolean changeStateOfSound() {
+		isSoundPlay=!isSoundPlay;
+		return !isSoundPlay;
+	}
+	
 	public void gomap(int x,int y)//进入地图 切换地图时，要给地图一个初始位置
 	{
 		/**
@@ -1296,7 +1312,7 @@ public class MainWindow extends JFrame
 			{
 				switch(menu_num)
 				{
-				case 3:case 5:case 6:
+				case 3:case 6:
 				{
 					menubutton[menu_num].setstate(0);
 					MainWindow.this.repaint();
@@ -1333,6 +1349,17 @@ public class MainWindow extends JFrame
 					taskw.setProgress(progress);
 					taskw.setVisible(!taskw.ChangeDisplay());
 					taskw.setBounds(200,200,200,300);
+					break;
+				}
+				case 5:
+				{
+					menubutton[menu_num].setstate(0);
+					MainWindow.this.repaint();
+					soundb.setVisible(!soundb.ChangeDisplay());
+					soundb.setBounds(350,200,200,300);
+					set.setVisible(!set.ChangeDisplay());
+					set.setBounds(300,100,200,300);					
+
 					break;
 				}
 				case 7:
@@ -1447,6 +1474,8 @@ public class MainWindow extends JFrame
 			}
 			case 1:
 			{
+				soundb.changeState();
+				changeStateOfSound();
 				break;
 			}
 			}
