@@ -1191,7 +1191,7 @@ public class MainWindow extends JFrame
 	{
 		private int assembly;/**组件
 		 * 0=按钮
-		 * 1=？
+		 * 1=静音
 		 * 2=NPC
 		 * 3=对话框
 		 * 4=任务框
@@ -1354,11 +1354,11 @@ public class MainWindow extends JFrame
 				{
 					menubutton[menu_num].setstate(0);
 					MainWindow.this.repaint();
-					soundb.setVisible(!soundb.ChangeDisplay());
+			/*		soundb.setVisible(!soundb.ChangeDisplay());
 					soundb.setBounds(350,200,200,300);
 					set.setVisible(!set.ChangeDisplay());
 					set.setBounds(300,100,200,300);					
-
+			*/
 					break;
 				}
 				case 7:
@@ -1473,8 +1473,8 @@ public class MainWindow extends JFrame
 			}
 			case 1:
 			{
-				soundb.changeState();
-				changeStateOfSound();
+			//	soundb.changeState();
+			//	changeStateOfSound();
 				break;
 			}
 			}
