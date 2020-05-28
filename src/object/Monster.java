@@ -50,28 +50,28 @@ public class Monster extends JPanel
 		{
 			HP=5000;
 			Defense=100;
-			Atk=10;
+			Atk=40;
 			break;
 		}
 		case 2:
 		{
 			HP=10000;
 			Defense=200;
-			Atk=10;
+			Atk=50;
 			break;
 		}
 		case 3:
 		{
 			HP=50000;
 			Defense=1000;
-			Atk=10;
+			Atk=60;
 			break;
 		}
 		case 4:
 		{
 			HP=50000;
 			Defense=1000;
-			Atk=10;
+			Atk=60;
 			break;
 		}
 		case 5:

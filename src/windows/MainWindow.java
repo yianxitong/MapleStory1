@@ -76,7 +76,7 @@ public class MainWindow extends JFrame
 	private SkillWindow skillw=new SkillWindow();//技能框
 	private EquipmentWindow equw=new EquipmentWindow();//装备栏
 //	private BackpackWindow backpackw=new BackpackWindow();//背包
-	private SetWindow set=new SetWindow();//设置按钮
+//	private SetWindow set=new SetWindow();//设置按钮
 	
 	private Mapcs map=new Mapcs();//地图
 	private NPC []npc=//所有NPC
@@ -87,7 +87,7 @@ public class MainWindow extends JFrame
 	private SystemButton sysb=new SystemButton();//系统按钮
 	private Menu menu=new Menu();//菜单
 	
-	private SoundButton soundb=new SoundButton();//声音按钮
+//	private SoundButton soundb=new SoundButton();//声音按钮
 	
 	private ButtonBase []menubutton=//菜单按钮
 		{
@@ -152,8 +152,8 @@ public class MainWindow extends JFrame
 		add(skillw);//技能栏
 		add(equw);//装备栏
 //		add(backpackw);//背包
-		add(soundb);
-		add(set);
+//		add(soundb);
+//		add(set);
 		
 		
 		for(NPC temp:npc)//NPC
@@ -188,7 +188,7 @@ public class MainWindow extends JFrame
 		endb.addMouseListener(new mouselisten(0,9));
 		taskw.addMouseListener(new mouselisten(4,0));
 		taskw.addMouseMotionListener(new mouselisten(4,0));
-		soundb.addMouseListener(new mouselisten(1,0));
+	//	soundb.addMouseListener(new mouselisten(1,0));
 
 		
 		dialog.setVisible(false);
